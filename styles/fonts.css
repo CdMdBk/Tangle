@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'ABeeZee';
+    src:
+        local('ABeeZee Regular'),
+        local('ABeeZee-Regular'),
+        url('../fonts/ABeeZee-Regular.woff2') format('woff2'),
+        url('../fonts/ABeeZee-Regular.woff') format('woff'),
+        url('../fonts/ABeeZee-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}

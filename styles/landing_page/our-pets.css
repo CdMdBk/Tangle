@@ -1,0 +1,195 @@
+.our-pets {
+    position: relative;
+    z-index: 7;
+
+    margin-top: 100px;
+}
+
+.our-pets__bg-box {
+    position: absolute;
+    left: 0;
+    top: 600px;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /*width: 1600px;*/
+}
+
+.our-pets__bg-box_bg {
+    object-fit: contain;
+    /*height: 800px;*/
+    height: 1200px;
+}
+
+.our-pets__list-animals {
+    position: relative;
+    z-index: 999;
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    margin-bottom: 40px;
+}
+
+.our-pets__animal-block {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 999;
+
+    width: 40%;
+    height: 200px;
+
+    background-color: #fff;
+    border-radius: 40px;
+}
+
+.our-pets__animal-block:nth-child(1) {
+    margin-bottom: 40px;
+}
+
+.our-pets__text-block {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 50%;
+}
+
+.our-pets_heading {
+    font-weight: 800;
+}
+
+.our-pets_font {
+    font-weight: 600;
+}
+
+.our-pets__text-block > a {
+    cursor: initial;
+}
+
+.our-pets__arrow {
+    position: relative;
+    left: calc(100% - 31px);
+
+    transition: var(--timing);
+    cursor: pointer;
+}
+
+.our-pets__arrow:hover {
+    width: 45px;
+    height: 20px;
+    left: calc(100% - 45px);
+}
+
+.our-pets__arrow > path {
+    fill: black;
+    transition: var(--timing);
+}
+
+.our-pets__arrow:hover > path {
+    fill: var(--accent-color);
+}
+
+.our-pets .button {
+    padding-bottom: 40px;
+}
+
+@media (min-width: 1400px) {
+    .our-pets_bg {
+        background-size: 1400px 100vh;
+    }
+}
+
+@media (max-width: 1200px) {
+    .our-pets {
+        margin-top: 40px;
+    }
+
+    .our-pets__bg-box {
+        top: 620px;
+    }
+
+    .our-pets__bg-box_bg {
+        height: 800px;
+    }
+}
+
+@media (max-width: 992px) {
+    .our-pets__bg-box {
+        top: 600px;
+    }
+
+    .our-pets {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .our-pets__bg-box {
+        top: 440px;
+    }
+
+    .our-pets__animal-block:nth-child(2),
+    .our-pets__animal-block:nth-child(4) {
+        display: none;
+    }
+
+    .our-pets__animal-block:nth-child(1) {
+        margin-bottom: 0;
+    }
+
+    .our-pets__animal-block {
+        width: 45%;
+    }
+
+    .our-pets__image {
+        object-fit: contain;
+        height: 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    .our-pets__bg-box {
+        top: 500px;
+        left: -200px;
+        width: 1000px;
+    }
+
+    .our-pets__animal-block:nth-child(1) {
+        margin-bottom: 30px;
+    }
+
+    .our-pets__animal-block {
+        width: 80%;
+        height: 160px;
+    }
+
+    .our-pets_bg {
+        background-size: 100vh;
+    }
+}
+
+@media (max-width: 460px) {
+    .our-pets__bg-box {
+        top: 550px;
+        left: -100px;
+        width: 800px;
+    }
+}
+
+@media (max-width: 360px) {
+    .our-pets__bg-box {
+        top: 600px;
+        left: -100px;
+        width: 800px;
+    }
+
+    .our-pets__animal-block {
+        width: 100%;
+    }
+}

@@ -1,0 +1,81 @@
+.help {
+    position: relative;
+    z-index: 9;
+
+    margin-top: 140px;
+}
+
+.help__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.help__image {
+    object-fit: contain;
+}
+
+.help__image,
+.help__text-container {
+    width: 45%;
+}
+
+.help__text-container {
+    padding-right: 100px;
+}
+
+.help__ul {
+    list-style-image: url('../../images/landing_page/help/ellipse.svg');
+}
+
+.help__li {
+}
+
+.help__li:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.help__li:last-child {
+    margin-bottom: 50px;
+}
+
+@media (max-width: 1200px) {
+    .help {
+        margin-top: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    .help {
+        margin-top: 110px;
+    }
+
+    .help__container {
+        justify-content: center;
+    }
+
+    .help__image {
+        margin-bottom: 40px;
+    }
+
+    .help__image,
+    .help__text-container {
+        width: 70%;
+    }
+
+    .help__text-container {
+        padding: 0;
+    }
+
+    .help__li {
+        padding-left: 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .help__image,
+    .help__text-container {
+        width: 80%;
+    }
+}

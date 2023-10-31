@@ -1,0 +1,37 @@
+.my-profile_h3 {
+
+}
+
+.recent-actions {
+
+}
+
+.recent-actions > .recent-actions__row:first-child {
+
+}
+
+.recent-actions__row {
+
+}
+
+.recent-actions__cell {
+
+}
+
+.recent-actions__cell_font {
+
+}
+
+/*admin*/
+
+.recent-actions[data-status] {
+
+}
+
+select.recent-actions__cell {
+
+}
+
+select.recent-actions__cell_font {
+
+}

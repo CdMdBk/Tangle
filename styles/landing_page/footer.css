@@ -1,0 +1,135 @@
+.footer {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+}
+
+.footer_bg {
+    background: url('../../images/landing_page/footer/bg.svg') no-repeat right bottom / 80%;
+}
+
+.footer__content-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    padding: 220px 0 0 300px;
+    height: 100%;
+}
+
+.footer__info-block {
+
+}
+
+.footer__info-block_heading {
+    color: var(--accent-color);
+    margin: 10px 0 4px 0;
+}
+
+.footer__ul {
+    list-style-type: none;
+}
+
+.footer__links-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__svg:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 1200px) {
+    .footer {
+        height: 300px;
+    }
+
+    .footer__content-box {
+        padding: 140px 0 0 260px;
+    }
+}
+
+@media (max-width: 992px) {
+    .footer_bg {
+        background-size: 90%;
+    }
+
+    .footer__content-box {
+        padding: 160px 0 0 140px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        height: 550px;
+    }
+
+    .footer_bg {
+        background-size: 200%;
+    }
+
+    .footer__content-box {
+        padding: 260px 0 0 160px;
+    }
+
+    .footer .logo {
+        display: flex;
+        justify-content: flex-end;
+
+        width: 100%;
+        padding-right: 40px;
+    }
+
+    .footer .logo_image {
+        display: none;
+    }
+
+    .footer__info-block,
+    .footer__links-block {
+        width: 50%;
+    }
+
+    .footer__links-block {
+        flex-direction: row;
+
+        padding-top: 30px;
+    }
+
+    .footer__svg:not(:last-child) {
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer {
+        height: 650px;
+    }
+
+    .footer_bg {
+        background-size: 1700px;
+    }
+
+    .footer__content-box {
+        padding: 220px 0 0 0;
+    }
+
+    .footer__info-block,
+    .footer__links-block {
+        display: flex;
+    }
+
+    .footer__info-block {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .footer__links-block {
+        justify-content: center;
+    }
+
+    .footer__info-block,
+    .footer__links-block {
+        width: 100%;
+    }
+}

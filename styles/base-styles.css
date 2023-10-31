@@ -1,0 +1,114 @@
+:root {
+    --accent-color: #F3841D;
+    --bg-color: #ffe984;
+    --additional-color: rgba(255, 236, 198);
+    --timing: .4s;
+    --long-timing: 1s;
+}
+
+* {
+    font-size: 1rem;
+    font-family: 'ABeeZee', sans-serif;
+    font-weight: 400;
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+input {
+    outline: none;
+}
+
+.logo {
+    position: relative;
+    z-index: 11;
+
+    width: 70px;
+    height: 70px;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.logo_image {
+    width: 100%;
+    height: 100%;
+}
+
+.heading {
+    font-size: 2rem;
+    color: #000;
+
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.related-lists__container > .heading {
+    margin-bottom: 10px;
+}
+
+.main .heading {
+    padding-top: 90px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button_appearance {
+    padding: 8px 40px;
+
+    background-color: var(--accent-color);
+    border-radius: 40px;
+    color: #fff;
+
+    transition: var(--timing);
+}
+
+.button_appearance:hover {
+    background-color: var(--additional-color);
+    color: var(--accent-color);
+}
+
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--additional-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--accent-color);
+}
+
+::selection {
+    background-color: var(--accent-color);
+}
+
+@media (max-width: 992px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main .heading {
+        margin-bottom: 30px;
+    }
+}
