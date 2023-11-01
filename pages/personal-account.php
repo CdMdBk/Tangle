@@ -27,6 +27,10 @@
     <script src="../scripts/jquery-3.7.1.min.js"></script>
 </head>
 <body style="background-color: #fff8eb">
+    <div class="preloader">
+        <div class="preloader_image"></div>
+    </div>
+
     <div class="header header_bg" data-accounts-bg>
         <div class="container">
             <nav class="row nav">
@@ -70,7 +74,7 @@
             </nav>
 
             <header class="account-header">
-                <div class="account-header__avatar">
+                <div class="account-header__avatar" data-personal-account>
                     <img class="account-header__photo account-header__photo_image" src="../images/accounts/avatar.png"
                          alt="avatar">
 
@@ -79,7 +83,7 @@
                     </h1>
                 </div>
 
-                <ul class="account-header__ul">
+                <ul class="account-header__ul" data-personal-account>
                     <li class="account-header__li account-header__li_font">
                         Мой профиль
                     </li>
@@ -88,13 +92,17 @@
                         Мои подопечные
                     </li>
 
-                    <li class="account-header__li" data-pop-up-nav>
-                        <p class="account-header__li-button">
-                            Помощь приюту<span></span>
-                        </p>
+                    <li class="account-header__li account-header__li_internal-active" data-pop-up-nav>
+                        <div class="account-header__li-button">
+                            <p class="account-header__li_font">
+                                Помощь приюту
+                            </p>
 
-                        <ul class="account-header__internal-ul">
-                            <li class="account-header__internal-li account-header__internal-li_font">
+                            <img class="account-header__li_arrow account-header__li_arrow_active" src="../images/accounts/arrow.svg" alt="arrow">
+                        </div>
+
+                        <ul class="account-header__internal-ul account-header__internal-ul_active">
+                            <li class="account-header__internal-li account-header__internal-li_font account-header__li_active">
                                 Пожертвование
                             </li>
 
@@ -124,44 +132,44 @@
                         Мой профиль
                     </h2>
 
-                    <div class="my-profile">
+                    <div class="my-profile" style="display: none">
                         <div class="my-profile__container">
                             <div class="my-profile__cell">
                                 <h3 class="my-profile__cell_font">
                                     Имя
                                 </h3>
 
-                                <p class="my-profile__cell-button my-profile__cell-button_appearance">
+                                <p class="my-profile__cell_font">
                                     Ольга
                                 </p>
                             </div>
 
                             <div class="my-profile__cell">
-                                <h3 class="">
+                                <h3 class="my-profile__cell_font">
                                     Фамилия
                                 </h3>
 
-                                <p class="my-profile__cell-button my-profile__cell-button_appearance">
+                                <p class="my-profile__cell_font">
                                     Лыкова
                                 </p>
                             </div>
 
                             <div class="my-profile__cell">
-                                <h3 class="">
+                                <h3 class="my-profile__cell_font">
                                     Телефон
                                 </h3>
 
-                                <p class="my-profile__cell-button my-profile__cell-button_appearance">
+                                <p class="my-profile__cell_font">
                                     8 925 646 44 88
                                 </p>
                             </div>
 
                             <div class="my-profile__cell">
-                                <h3 class="">
+                                <h3 class="my-profile__cell_font">
                                     Почта
                                 </h3>
 
-                                <p class="my-profile__cell-button my-profile__cell-button_appearance">
+                                <p class="my-profile__cell_font">
                                     rrr@mail.ru
                                 </p>
                             </div>
@@ -173,13 +181,14 @@
                             </div>
                         </div>
 
-                        <form class="my-profile__container" method="POST" action="#">
+                        <form class="my-profile__container my-profile__container_inactive" method="POST" action="#">
                             <fieldset class="my-profile__cell">
                                 <label class="my-profile__cell_font" for="name">
                                     Имя
                                 </label>
 
-                                <input class="my-profile__input" id="name" name="name" type="text" placeholder="Ольга">
+                                <input class="my-profile__input my-profile__input_appearance" id="name" name="name"
+                                       type="text" placeholder="Ольга">
                             </fieldset>
 
                             <fieldset class="my-profile__cell">
@@ -187,7 +196,7 @@
                                     Фамилия
                                 </label>
 
-                                <input class="my-profile__input" id="lastname" name="lastname" type="text" placeholder="Лыкова">
+                                <input class="my-profile__input my-profile__input_appearance" id="lastname" name="lastname" type="text" placeholder="Лыкова">
                             </fieldset>
 
                             <fieldset class="my-profile__cell">
@@ -195,7 +204,7 @@
                                     Телефон
                                 </label>
 
-                                <input class="my-profile__input" id="telephone" name="telephone" type="tel" placeholder="8 925 646 44 88">
+                                <input class="my-profile__input my-profile__input_appearance" id="telephone" name="telephone" type="tel" placeholder="8 925 646 44 88">
                             </fieldset>
 
                             <fieldset class="my-profile__cell">
@@ -203,7 +212,7 @@
                                     Почта
                                 </label>
 
-                                <input class="my-profile__input" id="email" name="email" type="email" placeholder="rrr@mail.ru">
+                                <input class="my-profile__input my-profile__input_appearance" id="email" name="email" type="email" placeholder="rrr@mail.ru">
                             </fieldset>
 
                             <fieldset class="my-profile__submit">
@@ -211,7 +220,7 @@
                             </fieldset>
                         </form>
 
-                        <h3 class="my-profile_h3">
+                        <h3 class="account-header__heading">
                             Недавние действия
                         </h3>
 
@@ -225,7 +234,7 @@
                                     Время
                                 </h4>
 
-                                <h4 class="recent-actions__cell recent-actions__cell_font">
+                                <h4 class="recent-actions__cell recent-actions__cell_font" data-personal-account>
                                     Цель пожертвования
                                 </h4>
 
@@ -243,12 +252,12 @@
                                     20:00
                                 </p>
 
-                                <p class="recent-actions__cell recent-actions__cell_font">
+                                <p class="recent-actions__cell recent-actions__cell_font" data-personal-account>
                                     Мышь (кот)
                                 </p>
 
-                                <p class="recent-actions__cell recent-actions__cell_font">
-                                    Одобрен
+                                <p class="recent-actions__cell recent-actions__cell_font" data-status>
+                                    Выполнен
                                 </p>
                             </div>
 
@@ -261,12 +270,12 @@
                                     20:00
                                 </p>
 
-                                <p class="recent-actions__cell recent-actions__cell_font">
+                                <p class="recent-actions__cell recent-actions__cell_font" data-personal-account>
                                     Мышь (кот)
                                 </p>
 
-                                <p class="recent-actions__cell recent-actions__cell_font">
-                                    Одобрен
+                                <p class="recent-actions__cell recent-actions__cell_font" data-status>
+                                    Ожидает
                                 </p>
                             </div>
 
@@ -279,12 +288,12 @@
                                     20:00
                                 </p>
 
-                                <p class="recent-actions__cell recent-actions__cell_font">
+                                <p class="recent-actions__cell recent-actions__cell_font" data-personal-account>
                                     Мышь (кот)
                                 </p>
 
-                                <p class="recent-actions__cell recent-actions__cell_font">
-                                    Одобрен
+                                <p class="recent-actions__cell recent-actions__cell_font" data-status>
+                                    Получен
                                 </p>
                             </div>
 
@@ -297,12 +306,12 @@
                                     20:00
                                 </p>
 
-                                <p class="recent-actions__cell recent-actions__cell_font">
+                                <p class="recent-actions__cell recent-actions__cell_font" data-personal-account>
                                     Мышь (кот)
                                 </p>
 
-                                <p class="recent-actions__cell recent-actions__cell_font">
-                                    Одобрен
+                                <p class="recent-actions__cell recent-actions__cell_font" data-status>
+                                    Отклонён
                                 </p>
                             </div>
 
@@ -315,12 +324,66 @@
                                     20:00
                                 </p>
 
-                                <p class="recent-actions__cell recent-actions__cell_font">
+                                <p class="recent-actions__cell recent-actions__cell_font" data-personal-account>
                                     Мышь (кот)
                                 </p>
 
+                                <p class="recent-actions__cell recent-actions__cell_font" data-status>
+                                    Ожидает
+                                </p>
+                            </div>
+
+                            <div class="recent-actions__row">
                                 <p class="recent-actions__cell recent-actions__cell_font">
-                                    Одобрен
+                                    02.10.2023
+                                </p>
+
+                                <p class="recent-actions__cell recent-actions__cell_font">
+                                    20:00
+                                </p>
+
+                                <p class="recent-actions__cell recent-actions__cell_font" data-personal-account>
+                                    Мышь (кот)
+                                </p>
+
+                                <p class="recent-actions__cell recent-actions__cell_font" data-status>
+                                    Отклонён
+                                </p>
+                            </div>
+
+                            <div class="recent-actions__row">
+                                <p class="recent-actions__cell recent-actions__cell_font">
+                                    02.10.2023
+                                </p>
+
+                                <p class="recent-actions__cell recent-actions__cell_font">
+                                    20:00
+                                </p>
+
+                                <p class="recent-actions__cell recent-actions__cell_font" data-personal-account>
+                                    Мышь (кот)
+                                </p>
+
+                                <p class="recent-actions__cell recent-actions__cell_font" data-status>
+                                    Ожидает
+                                </p>
+                            </div>
+
+                            <div class="recent-actions__row">
+                                <p class="recent-actions__cell recent-actions__cell_font">
+                                    02.10.2023
+                                </p>
+
+                                <p class="recent-actions__cell recent-actions__cell_font">
+                                    20:00
+                                </p>
+
+                                <p class="recent-actions__cell recent-actions__cell_font" data-personal-account>
+                                    Мышь (кот)
+                                </p>
+
+                                <p class="recent-actions__cell recent-actions__cell_font" data-status>
+                                    Выполнен
                                 </p>
                             </div>
                         </div>
@@ -507,5 +570,6 @@
     <script src="../scripts/landing_page/burger.js"></script>
     <script src="../scripts/personal_account/change-profile.js"></script>
     <script src="../scripts/personal_account/switch-tabs.js"></script>
+    <script src="../scripts/personal_account/color-status.js"></script>
 </body>
 </html>

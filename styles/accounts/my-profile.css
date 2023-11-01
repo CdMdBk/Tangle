@@ -1,49 +1,95 @@
 .account-header__container {
+    grid-row: 1 / 8;
+    grid-column: 3 / 9;
 
+    background-color: #fff;
+    padding: 40px 60px;
+    border-radius: 10px;
+}
+
+.account-header__container[data-admin] {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .account-header__heading {
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+}
 
+.account-header__heading[data-admin-heading] {
+    width: 50%;
 }
 
 .my-profile {
-
 }
 
 .my-profile__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
+    margin-bottom: 80px;
+    padding: 0 40px;
+}
+
+.my-profile__container_inactive {
+    display: none;
 }
 
 .my-profile__cell {
-
+    width: 40%;
+    margin-bottom: 40px;
 }
 
 .my-profile__cell_font {
-
+    line-height: 40px;
 }
 
-.my-profile__cell-button {
-
+p.my-profile__cell_font {
+    font-weight: 600;
 }
 
-.my-profile__cell-button_appearance {
-
+.my-profile__cell-change,
+.my-profile__submit {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
-.my-profile__cell-change {
+.my-profile__cell-change_appearance,
+.my-profile__submit_appearance {
+    padding: 12px 34px;
+    cursor: pointer;
 
+    color: #fff;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    background-color: var(--accent-color);
+    transition: var(--timing);
 }
 
-.my-profile__cell-change_appearance {
-
+.my-profile__cell-change_appearance:hover,
+.my-profile__submit_appearance:hover {
+    color: var(--accent-color);
+    background-color: rgba(255, 122, 0, .4);
 }
 
 .my-profile__input {
+    display: block;
 
+    background: initial;
+    border: 2px solid #000;
 }
 
-.my-profile__submit {
+.my-profile__input_appearance {
+    padding: 4px 20px;
+}
 
+.my-profile__input_appearance,
+.my-profile__input_appearance::placeholder {
+    color: #000;
 }
 
 .my-profile__submit_appearance {

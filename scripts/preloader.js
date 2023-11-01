@@ -1,7 +1,7 @@
-const preloaderBlock = document.querySelector('.preloader');
+const preloaderBlock = $('.preloader');
 
 setTimeout(() => {
-    preloaderBlock.style.opacity = 0;
+    preloaderBlock.css('opacity', 0);
 }, 600);
 
 setTimeout(() => {

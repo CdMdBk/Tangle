@@ -1,13 +1,26 @@
 .account-header__button-filter {
+    align-self: flex-start;
 
+    background-color: initial;
+    text-align: end;
+    font-size: 1.2rem;
+
+    cursor: pointer;
 }
 
 .admin-buttons {
+    display: flex;
+    justify-content: flex-end;
 
+    margin: 20px 0 40px 0;
 }
 
-.admin-buttons_font {
+.admin-buttons_appearance:first-child {
+    margin-right: 40px;
+}
 
+.admin-buttons_appearance {
+    background-color: initial;
 }
 
 /*остальное, блок фильтров*/
