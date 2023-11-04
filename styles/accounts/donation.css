@@ -1,13 +1,21 @@
 .donation {
-
+    display: flex;
+    flex-direction: column;
 }
 
 .donation_h3 {
-
+    font-size: 1.4rem;
+    margin-bottom: 40px;
 }
 
 .donation__radio-block {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    margin: 0 0 40px 40px;
+    border-radius: 10px;
 
+    background-color: rgba(255, 230, 0, 0.15);
 }
 
 .donation__radio-block > .donation__radio-cell:nth-child(5) {
@@ -15,27 +23,98 @@
 }
 
 .donation__radio-cell {
-
+    position: relative;
+    border-radius: 10px;
 }
 
-.donation__radio {
+.donation__radio-cell:active {
+    background-color: var(--accent-color);
+}
 
+.donation__radio,
+.donation__purpose-radio,
+.donation__purpose-some {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
 }
 
 .donation__radio_appearance {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 10px;
+
+    height: 100%;
+}
+
+.donation__radio_appearance_checked,
+.donation__purpose-radio_appearance_checked,
+.donation__purpose-some_appearance_checked {
+    background-color: #F3841D;
+}
+
+.donation__purpose {
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    width: 50%;
+}
+
+.donation__purpose-direction {
+    width: 50%;
+}
+
+.donation__purpose-direction[data-some] {
+    width: 45%;
+    background-color: rgba(255, 230, 0, 0.15);
+    border-radius: 16px;
+    padding: 10px 20px;
+}
+
+.donation__purpose-cell {
+    position: relative;
+    height: 40px;
+}
+
+.donation__purpose-cell[data-some] {
+    height: 26px;
+}
+
+.donation__purpose-cell:not(:last-child) {
+    margin-bottom: 6px;
+}
+
+.donation__purpose-radio_appearance {
+    position: absolute;
+    top: 0;
+    padding: 6px 30px;
+    border-radius: 20px;
+    border: 1px solid var(--accent-color);
+    width: 75%;
+    text-align: center;
+}
+
+.donation__purpose-some {
 
 }
 
-.donation__select {
-
+.donation__purpose-some_appearance {
+    padding: 4px 10px;
+    border-radius: 10px;
 }
 
 .donation__submit {
-
+    display: flex;
+    justify-content: center;
 }
 
 .donation__submit_appearance {
-
+    padding: 10px 30px;
+    border-radius: 20px;
+    background-color: var(--accent-color);
+    color: #fff;
 }
 
 .donation__submit_appearance:hover {

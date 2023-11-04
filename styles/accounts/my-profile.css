@@ -1,4 +1,6 @@
 .account-header__container {
+    position: relative;
+
     grid-row: 1 / 8;
     grid-column: 3 / 9;
 

@@ -3,7 +3,7 @@ const buttonChangeStatus = $('.admin-buttons_appearance:first-child');
 buttonChangeStatus.click(changeStatus);
 
 function changeStatus() {
-    if (buttonChangeStatus.html() === 'Изменить статус') {
+    if (buttonChangeStatus.html().trim() === 'Изменить статус') {
         buttonChangeStatus.html('Сохранить');
     } else {
         buttonChangeStatus.html('Изменить статус');

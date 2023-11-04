@@ -1,7 +1,7 @@
 :root {
     --accent-color: #F3841D;
     --bg-color: #ffe984;
-    --additional-color: rgba(255, 236, 198);
+    --additional-color: rgb(255, 241, 224);
     --timing: .4s;
     --long-timing: 1s;
 }

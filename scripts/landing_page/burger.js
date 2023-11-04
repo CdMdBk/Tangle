@@ -1,26 +1,26 @@
-const burgerButton = document.querySelector('.nav__burger');
-const navBlock = document.querySelector('.nav__ul');
-const arrLinksNav = document.querySelectorAll('.nav__li');
+const burgerButton = $('.nav__burger');
+const navBlock = $('.nav__ul');
+const arrLinksNav = $('.nav__li');
 
 removeNav();
-window.addEventListener('resize', removeNav);
+$(window).resize(removeNav);
 
-burgerButton.addEventListener('click', toggleNavVisibility);
+burgerButton.click(toggleNavVisibility);
 
-arrLinksNav.forEach((link, index) => {
+arrLinksNav.each((index, link) => {
     link.addEventListener('click', removeNav);
 });
 
 function toggleNavVisibility() {
-    burgerButton.classList.toggle('nav__burger_active');
-    navBlock.classList.toggle('nav__ul_active');
+    burgerButton.toggleClass('nav__burger_active');
+    navBlock.toggleClass('nav__ul_active');
     document.body.style.overflow === 'hidden' ?
         document.body.style.overflow = '' :
         document.body.style.overflow = 'hidden';
 }
 
 function removeNav() {
-    burgerButton.classList.remove('nav__burger_active');
-    navBlock.classList.remove('nav__ul_active');
+    burgerButton.removeClass('nav__burger_active');
+    navBlock.removeClass('nav__ul_active');
     document.body.style.overflow = '';
 }

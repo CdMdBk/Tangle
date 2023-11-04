@@ -27,6 +27,10 @@
     <script src="../scripts/jquery-3.7.1.min.js"></script>
 </head>
 <body style="background-color: #fff8eb">
+    <div class="preloader">
+        <div class="preloader_image"></div>
+    </div>
+
     <div class="header header_bg" data-accounts-bg>
         <div class="container">
             <nav class="row nav">
@@ -109,9 +113,105 @@
                         Фильтры
                     </button>
 
-                    <div class="" style="display: none">
+                    <form class="filter" method="post" action="#">
+                        <fieldset class="filter__input-box">
+                            <label class="filter__text" for="date-start">
+                                От
+                            </label>
 
-                    </div>
+                            <input id="date-start" name="date-start" type="date">
+                        </fieldset>
+
+                        <fieldset class="filter__input-box">
+                            <label class="filter__text" for="date-end">
+                                До
+                            </label>
+
+                            <input id="date-end" name="date-end" type="date">
+                        </fieldset>
+
+                        <fieldset class="filter__input-box">
+                            <h5 class="filter__text">
+                                Диапазон суммы
+                            </h5>
+
+                            <div class="price-input">
+                                <div class="field">
+                                    <span>
+                                        Min
+                                    </span>
+
+                                    <input type="number" class="input-min" value="2500">
+                                </div>
+
+                                <div class="field">
+                                    <span>
+                                        Max
+                                    </span>
+
+                                    <input type="number" class="input-max" value="7500">
+                                </div>
+                            </div>
+
+                            <div class="slider">
+                                <div class="progress"></div>
+                            </div>
+
+                            <div class="range-input">
+                                <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
+
+                                <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="filter__input-box">
+                            <label class="filter__text" for="direction">
+                                Цель пожертвования
+                            </label>
+
+                            <select class="filter__select" name="direction" id="direction">
+                                <option value="pet">
+                                    Питомец
+                                </option>
+
+                                <option value="food">
+                                    Корм
+                                </option>
+
+                                <option value="medicines">
+                                    Лекарства
+                                </option>
+                            </select>
+                        </fieldset>
+
+                        <fieldset class="filter__input-box">
+                            <label class="filter__text" for="status">
+                                Статус
+                            </label>
+
+                            <select class="filter__select" name="status" id="status">
+                                <option value="waiting-filter">
+                                    Ожидает
+                                </option>
+
+                                <option value="received-filter">
+                                    Получен
+                                </option>
+
+                                <option value="completed-filter">
+                                    Выполнен
+                                </option>
+
+                                <option value="rejected-filter">
+                                    Отклонён
+                                </option>
+                            </select>
+                        </fieldset>
+
+                        <fieldset class="filter__input-box">
+                            <input class="filter__submit filter__submit_appearance" type="submit" value="Отфильтровать">
+                        </fieldset>
+                    </form>
 
                     <div class="recent-actions" data-admin>
                         <div class="recent-actions__row">
@@ -464,230 +564,6 @@
                             </select>
                         </div>
                     </div>
-
-                    <div class="recent-actions" data-status style="display: none">
-                        <div class="recent-actions__row">
-                            <h4 class="recent-actions__cell recent-actions__cell_font">
-                                ФИО
-                            </h4>
-
-                            <h4 class="recent-actions__cell recent-actions__cell_font">
-                                Почта
-                            </h4>
-
-                            <h4 class="recent-actions__cell recent-actions__cell_font">
-                                Сумма
-                            </h4>
-
-                            <h4 class="recent-actions__cell recent-actions__cell_font">
-                                Дата
-                            </h4>
-
-                            <h4 class="recent-actions__cell recent-actions__cell_font">
-                                Статус заявки
-                            </h4>
-                        </div>
-
-                        <div class="recent-actions__row">
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                Лыкова О.
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                rrr@mail.ru
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                3400₽
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                30.10.2023
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                Ожидает
-                            </p>
-
-                            <select class="recent-actions__cell recent-actions__cell_font" id="" name="status">
-                                <option value="waiting">
-                                    Ожидает
-                                </option>
-
-                                <option value="received">
-                                    Получен
-                                </option>
-
-                                <option value="completed">
-                                    Выполнен
-                                </option>
-
-                                <option value="rejected">
-                                    Отклонён
-                                </option>
-                            </select>
-                        </div>
-
-                        <div class="recent-actions__row">
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                Лыкова О.
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                rrr@mail.ru
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                3400₽
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                30.10.2023
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                Ожидает
-                            </p>
-
-                            <select class="recent-actions__cell recent-actions__cell_font" id="" name="status">
-                                <option value="waiting">
-                                    Ожидает
-                                </option>
-
-                                <option value="received">
-                                    Получен
-                                </option>
-
-                                <option value="completed">
-                                    Выполнен
-                                </option>
-
-                                <option value="rejected">
-                                    Отклонён
-                                </option>
-                            </select>
-                        </div>
-
-                        <div class="recent-actions__row">
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                Лыкова О.
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                rrr@mail.ru
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                3400₽
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                30.10.2023
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                Ожидает
-                            </p>
-
-                            <select class="recent-actions__cell recent-actions__cell_font" id="" name="status">
-                                <option value="waiting">
-                                    Ожидает
-                                </option>
-
-                                <option value="received">
-                                    Получен
-                                </option>
-
-                                <option value="completed">
-                                    Выполнен
-                                </option>
-
-                                <option value="rejected">
-                                    Отклонён
-                                </option>
-                            </select>
-                        </div>
-
-                        <div class="recent-actions__row">
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                Лыкова О.
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                rrr@mail.ru
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                3400₽
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                30.10.2023
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                Ожидает
-                            </p>
-
-                            <select class="recent-actions__cell recent-actions__cell_font" id="" name="status">
-                                <option value="waiting">
-                                    Ожидает
-                                </option>
-
-                                <option value="received">
-                                    Получен
-                                </option>
-
-                                <option value="completed">
-                                    Выполнен
-                                </option>
-
-                                <option value="rejected">
-                                    Отклонён
-                                </option>
-                            </select>
-                        </div>
-
-                        <div class="recent-actions__row">
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                Лыкова О.
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                rrr@mail.ru
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                3400₽
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                30.10.2023
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                Ожидает
-                            </p>
-
-                            <select class="recent-actions__cell recent-actions__cell_font" id="" name="status">
-                                <option value="waiting">
-                                    Ожидает
-                                </option>
-
-                                <option value="received">
-                                    Получен
-                                </option>
-
-                                <option value="completed">
-                                    Выполнен
-                                </option>
-
-                                <option value="rejected">
-                                    Отклонён
-                                </option>
-                            </select>
-                        </div>
-                    </div>
                 </div>
             </header>
 
@@ -708,5 +584,7 @@
     <script src="../scripts/admin/change-status.js"></script>
     <script src="../scripts/admin/show-filters.js"></script>
     <script src="../scripts/personal_account/color-status.js"></script>
+    <script src="../scripts/admin/toggle-show.js"></script>
+    <script src="../scripts/admin/range-input.js"></script>
 </body>
 </html>

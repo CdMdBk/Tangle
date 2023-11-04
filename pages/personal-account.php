@@ -390,8 +390,8 @@
                     </div>
 
                     <form class="donation" method="POST" action="#">
-                        <h3 class="donation_h3" for="">
-                            Сумма пожертвования
+                        <h3 class="donation_h3">
+                            1.   Сумма пожертвования
                         </h3>
 
 <!--                        https://snipp.ru/html-css/style-radio-->
@@ -438,32 +438,82 @@
                             </fieldset>
                         </div>
 
-                        <select class="donation__select" id="direction" name="direction" required>
-                            <option value="" disabled>
-                                Выберите
-                            </option>
+                        <h3 class="donation_h3">
+                            2.   Цель пожертвования
+                        </h3>
 
-                            <option value="food">
-                                Корм
-                            </option>
+                        <div class="donation__purpose">
+                            <div class="donation__purpose-direction">
+                                <fieldset class="donation__purpose-cell">
+                                    <input class="donation__purpose-radio" id="pet"
+                                           name="direction" value="pet"
+                                           type="radio" required>
 
-                            <option value="medicines">
-                                Лекарства
-                            </option>
+                                    <label class="donation__purpose-radio_appearance" for="pet">
+                                        Питомец
+                                    </label>
+                                </fieldset>
 
-                            <option value="pet">
-                                Питомец
-                            </option>
-                        </select>
+                                <fieldset class="donation__purpose-cell">
+                                    <input class="donation__purpose-radio" id="food" name="direction" value="food" type="radio" required>
 
-                        <select class="donation__select" id="specifically" name="specifically" required>
-                            <option value="" disabled>
-                                Выберите направление
-                            </option>
-                        </select>
+                                    <label class="donation__purpose-radio_appearance" for="food">
+                                        Корм
+                                    </label>
+                                </fieldset>
+
+                                <fieldset class="donation__purpose-cell">
+                                    <input class="donation__purpose-radio" id="medicines" name="direction" value="medicines" type="radio" required>
+
+                                    <label class="donation__purpose-radio_appearance" for="medicines">
+                                        Лекарства
+                                    </label>
+                                </fieldset>
+                            </div>
+                            
+                            <div class="donation__purpose-direction" data-some>
+                                <fieldset class="donation__purpose-cell" data-some>
+                                    <input class="donation__purpose-some" id="lucky"
+                                           name="purpose-some" value="Lucky"
+                                           type="radio" required>
+
+                                    <label class="donation__purpose-some_appearance" for="lucky">
+                                        Лаки (соб)
+                                    </label>
+                                </fieldset>
+
+                                <fieldset class="donation__purpose-cell" data-some>
+                                    <input class="donation__purpose-some" id="bim" name="purpose-some" value="Bim"
+                                           type="radio" required>
+
+                                    <label class="donation__purpose-some_appearance" for="bim">
+                                        Бим (соб)
+                                    </label>
+                                </fieldset>
+
+                                <fieldset class="donation__purpose-cell" data-some>
+                                    <input class="donation__purpose-some" id="martin" name="purpose-some"
+                                           value="Martin" type="radio" required>
+
+                                    <label class="donation__purpose-some_appearance" for="martin">
+                                        Мартин (кот)
+                                    </label>
+                                </fieldset>
+
+                                <fieldset class="donation__purpose-cell" data-some>
+                                    <input class="donation__purpose-some" id="mouse" name="purpose-some"
+                                           value="Mouse" type="radio" required>
+
+                                    <label class="donation__purpose-some_appearance" for="mouse">
+                                        Мышь (кот)
+                                    </label>
+                                </fieldset>
+                            </div>
+                        </div>
 
                         <fieldset class="donation__submit">
-                            <input class="donation__submit_appearance" id="submit" name="submit" type="submit">
+                            <input class="donation__submit_appearance" id="submit" name="submit" type="submit"
+                                   value="Пожертвовать">
                         </fieldset>
                     </form>
                 </div>
@@ -571,5 +621,6 @@
     <script src="../scripts/personal_account/change-profile.js"></script>
     <script src="../scripts/personal_account/switch-tabs.js"></script>
     <script src="../scripts/personal_account/color-status.js"></script>
+    <script src="../scripts/personal_account/checked-radio-input.js"></script>
 </body>
 </html>
