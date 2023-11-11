@@ -1,9 +1,9 @@
-const arrStatus = $('.recent-actions__cell[data-status]');
-const arrStatusSelect = $('.recent-actions__cell[data-status-select]');
-
 updateColorStatus();
 
 function updateColorStatus() {
+    const arrStatus = $('.recent-actions__cell[data-status]');
+    const arrStatusSelect = $('.recent-actions__cell[data-status-select]');
+
     arrStatus.each((index, element) => {
         switch(element.innerHTML.trim()) {
             case 'Выполнен':

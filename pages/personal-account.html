@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -7,36 +7,33 @@
     <meta name="author" content="Лиза Дадонова">
     <meta name="keywords" content="animals, pets">
 
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="../styles/bootstrap.css">
     <link rel="stylesheet" href="../styles/base-styles.css">
     <link rel="stylesheet" href="../styles/preloader.css">
     <link rel="stylesheet" href="../styles/fonts.css">
 
     <link rel="stylesheet" href="../styles/landing_page/header.css">
-    <link rel="stylesheet" href="../styles/landing_page/about-us.css">
-    <link rel="stylesheet" href="../styles/landing_page/our-pets.css">
-    <link rel="stylesheet" href="../styles/landing_page/help.css">
     <link rel="stylesheet" href="../styles/landing_page/footer.css">
-    <link rel="stylesheet" href="../styles/landing_page/validation.css">
-    <link rel="stylesheet" href="../styles/landing_page/threads.css">
-    <link rel="stylesheet" href="../styles/landing_page/log.css">
+    <link rel="stylesheet" href="../styles/accounts/nav-account.css">
+    <link rel="stylesheet" href="../styles/accounts/my-profile.css">
+    <link rel="stylesheet" href="../styles/accounts/recent-actions.css">
+    <link rel="stylesheet" href="../styles/accounts/donation.css">
+
+
 
     <link rel="favicon icon" href="../images/logo.svg">
     <title>
-        Tangle
+        Личный кабинет
     </title>
 
     <script src="../scripts/jquery-3.7.1.min.js"></script>
 </head>
-<body>
+<body style="background-color: #fff8eb">
     <div class="preloader">
         <div class="preloader_image"></div>
     </div>
-    
-    <div class="log"></div>
 
-    <div class="header header_bg">
+    <div class="header header_bg" data-accounts-bg>
         <div class="container">
             <nav class="row nav">
                 <div class="col-5 col-md-6 logo">
@@ -50,323 +47,490 @@
                 <ul class="col-7 col-md-12 nav__ul">
                     <li class="nav__li">
                         <a class="nav_font"
-                           href="#about-us">
+                           href="index.html#about-us">
                             О приюте
                         </a>
                     </li>
 
                     <li class="nav__li">
                         <a class="nav_font"
-                           href="#our-pets">
+                           href="index.html#our-pets">
                             Наши питомцы
                         </a>
                     </li>
 
                     <li class="nav__li">
                         <a class="nav_font"
-                           href="#help">
+                           href="index.html#help">
                             Помощь
                         </a>
                     </li>
 
                     <li class="nav__li">
                         <a class="nav_font"
-                           href="personal-account.php">
-                            Личный кабинет
+                           href="index.html">
+                            Выход
                         </a>
                     </li>
                 </ul>
             </nav>
 
-            <h1 class="header__heading-box header__heading-box_font">
-                У любви нет<br><span>породы</span>
-            </h1>
+            <header class="account-header">
+                <div class="account-header__avatar" data-personal-account>
+                    <img class="account-header__photo account-header__photo_image" src="../images/accounts/avatar.png"
+                         alt="avatar">
 
-            <div class="row related-lists">
-                <div class="col-12 related-lists__container">
-                    <h2 class="heading">
-                        Подобрать питомца
+                    <h1 class="account-header__avatar_heading"></h1>
+                </div>
+
+                <ul class="account-header__ul" data-personal-account>
+                    <li class="account-header__li account-header__li_font">
+                        Мой профиль
+                    </li>
+
+                    <li class="account-header__li account-header__li_font">
+                        Мои подопечные
+                    </li>
+
+                    <li class="account-header__li account-header__li_internal-active" data-pop-up-nav>
+                        <div class="account-header__li-button">
+                            <p class="account-header__li_font">
+                                Помощь приюту
+                            </p>
+
+                            <img class="account-header__li_arrow account-header__li_arrow_active" src="../images/accounts/arrow.svg" alt="arrow">
+                        </div>
+
+                        <ul class="account-header__internal-ul account-header__internal-ul_active">
+                            <li class="account-header__internal-li account-header__internal-li_font account-header__li_active">
+                                Пожертвование
+                            </li>
+
+                            <li class="account-header__internal-li account-header__internal-li_font">
+                                Выгул
+                            </li>
+
+                            <li class="account-header__internal-li account-header__internal-li_font">
+                                Закупка
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="account-header__li account-header__li_font">
+                        Мои уведомления
+                    </li>
+
+                    <li class="account-header__li">
+                        <a class="account-header__li_font" href="index.html">
+                            Выйти
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="account-header__container">
+                    <h2 class="account-header__heading">
+                        Мой профиль
                     </h2>
 
-                    <form class="related-lists__flex-box" action="#" method="post">
-                        <fieldset class="related-lists__flex-element">
-                            <label class="related-lists_font" for="type-animal">
-                                Вид
-                            </label>
+                    <div class="my-profile" style="display: none">
+                        <div class="my-profile__container">
+                            <div class="my-profile__cell">
+                                <h3 class="my-profile__cell_font">
+                                    Имя
+                                </h3>
 
-                            <select class="related-lists__select" id="type-animal" name="type-animal" required>
-                                <option value="" disabled>
-                                    Выберите
-                                </option>
+                                <p class="my-profile__cell_font"></p>
+                            </div>
 
-                                <option value="dog">
-                                    Собака
-                                </option>
+                            <div class="my-profile__cell">
+                                <h3 class="my-profile__cell_font">
+                                    Логин
+                                </h3>
 
-                                <option value="cat">
-                                    Кошка
-                                </option>
-                            </select>
+                                <p class="my-profile__cell_font"></p>
+                            </div>
 
-                            <svg class="related-lists__arrow" width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="related-lists__arrow_size" d="M1 1L4.5 7L8 1" stroke="black" stroke-width="1.3"/>
-                            </svg>
+                            <div class="my-profile__cell">
+                                <h3 class="my-profile__cell_font">
+                                    Почта
+                                </h3>
+
+                                <p class="my-profile__cell_font"></p>
+                            </div>
+
+                            <div class="my-profile__cell">
+                                <h3 class="my-profile__cell_font">
+                                    Телефон
+                                </h3>
+
+                                <p class="my-profile__cell_font"></p>
+                            </div>
+
+                            <div class="my-profile__cell-change">
+                                <button class="my-profile__cell-change_appearance">
+                                    Изменить
+                                </button>
+                            </div>
+                        </div>
+
+                        <form class="my-profile__container my-profile__container_inactive">
+                            <fieldset class="my-profile__cell">
+                                <label class="my-profile__cell_font"
+                                       for="name">
+                                    Имя
+                                </label>
+
+                                <input class="my-profile__input my-profile__input_appearance"
+                                       id="name"
+                                       name="name"
+                                       type="text"
+                                       placeholder="">
+                            </fieldset>
+
+                            <fieldset class="my-profile__cell">
+                                <label class="my-profile__cell_font"
+                                       for="login">
+                                    Логин
+                                </label>
+
+                                <input class="my-profile__input my-profile__input_appearance"
+                                       id="login"
+                                       name="login"
+                                       type="text"
+                                       placeholder="">
+                            </fieldset>
+
+                            <fieldset class="my-profile__cell">
+                                <label class="my-profile__cell_font" for="email">
+                                    Почта
+                                </label>
+
+                                <input class="my-profile__input my-profile__input_appearance"
+                                       id="email"
+                                       name="email"
+                                       type="tel"
+                                       placeholder="">
+                            </fieldset>
+
+                            <fieldset class="my-profile__cell">
+                                <label class="my-profile__cell_font" for="tel">
+                                    Телефон
+                                </label>
+
+                                <input class="my-profile__input my-profile__input_appearance"
+                                       id="tel"
+                                       name="tel"
+                                       type="tel"
+                                       placeholder="">
+                            </fieldset>
+
+                            <fieldset class="my-profile__submit">
+                                <input class="my-profile__submit_appearance" value="Сохранить" type="submit">
+                            </fieldset>
+                        </form>
+
+                        <h3 class="account-header__heading">
+                            Недавние действия
+                        </h3>
+
+                        <div class="recent-actions">
+                            <div class="recent-actions__row">
+                                <h4 class="recent-actions__cell recent-actions__cell_font">
+                                    Дата
+                                </h4>
+
+                                <h4 class="recent-actions__cell recent-actions__cell_font">
+                                    Время
+                                </h4>
+
+                                <h4 class="recent-actions__cell recent-actions__cell_font" data-personal-account>
+                                    Цель пожертвования
+                                </h4>
+
+                                <h4 class="recent-actions__cell recent-actions__cell_font">
+                                    Статус заявки
+                                </h4>
+                            </div>
+
+<!--                            <div class="recent-actions__row">-->
+<!--                                <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                    02.10.2023-->
+<!--                                </p>-->
+
+<!--                                <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                    20:00-->
+<!--                                </p>-->
+
+<!--                                <p class="recent-actions__cell recent-actions__cell_font" data-personal-account>-->
+<!--                                    Мышь (кот)-->
+<!--                                </p>-->
+
+<!--                                <p class="recent-actions__cell recent-actions__cell_font" data-status>-->
+<!--                                    Выполнен-->
+<!--                                </p>-->
+<!--                            </div>-->
+
+<!--                            <div class="recent-actions__row">-->
+<!--                                <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                    02.10.2023-->
+<!--                                </p>-->
+
+<!--                                <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                    20:00-->
+<!--                                </p>-->
+
+<!--                                <p class="recent-actions__cell recent-actions__cell_font" data-personal-account>-->
+<!--                                    Мышь (кот)-->
+<!--                                </p>-->
+
+<!--                                <p class="recent-actions__cell recent-actions__cell_font" data-status>-->
+<!--                                    Ожидает-->
+<!--                                </p>-->
+<!--                            </div>-->
+
+<!--                            <div class="recent-actions__row">-->
+<!--                                <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                    02.10.2023-->
+<!--                                </p>-->
+
+<!--                                <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                    20:00-->
+<!--                                </p>-->
+
+<!--                                <p class="recent-actions__cell recent-actions__cell_font" data-personal-account>-->
+<!--                                    Мышь (кот)-->
+<!--                                </p>-->
+
+<!--                                <p class="recent-actions__cell recent-actions__cell_font" data-status>-->
+<!--                                    Получен-->
+<!--                                </p>-->
+<!--                            </div>-->
+
+<!--                            <div class="recent-actions__row">-->
+<!--                                <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                    02.10.2023-->
+<!--                                </p>-->
+
+<!--                                <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                    20:00-->
+<!--                                </p>-->
+
+<!--                                <p class="recent-actions__cell recent-actions__cell_font" data-personal-account>-->
+<!--                                    Мышь (кот)-->
+<!--                                </p>-->
+
+<!--                                <p class="recent-actions__cell recent-actions__cell_font" data-status>-->
+<!--                                    Отклонён-->
+<!--                                </p>-->
+<!--                            </div>-->
+
+<!--                            <div class="recent-actions__row">-->
+<!--                                <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                    02.10.2023-->
+<!--                                </p>-->
+
+<!--                                <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                    20:00-->
+<!--                                </p>-->
+
+<!--                                <p class="recent-actions__cell recent-actions__cell_font" data-personal-account>-->
+<!--                                    Мышь (кот)-->
+<!--                                </p>-->
+
+<!--                                <p class="recent-actions__cell recent-actions__cell_font" data-status>-->
+<!--                                    Ожидает-->
+<!--                                </p>-->
+<!--                            </div>-->
+
+<!--                            <div class="recent-actions__row">-->
+<!--                                <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                    02.10.2023-->
+<!--                                </p>-->
+
+<!--                                <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                    20:00-->
+<!--                                </p>-->
+
+<!--                                <p class="recent-actions__cell recent-actions__cell_font" data-personal-account>-->
+<!--                                    Мышь (кот)-->
+<!--                                </p>-->
+
+<!--                                <p class="recent-actions__cell recent-actions__cell_font" data-status>-->
+<!--                                    Отклонён-->
+<!--                                </p>-->
+<!--                            </div>-->
+
+<!--                            <div class="recent-actions__row">-->
+<!--                                <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                    02.10.2023-->
+<!--                                </p>-->
+
+<!--                                <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                    20:00-->
+<!--                                </p>-->
+
+<!--                                <p class="recent-actions__cell recent-actions__cell_font" data-personal-account>-->
+<!--                                    Мышь (кот)-->
+<!--                                </p>-->
+
+<!--                                <p class="recent-actions__cell recent-actions__cell_font" data-status>-->
+<!--                                    Ожидает-->
+<!--                                </p>-->
+<!--                            </div>-->
+
+<!--                            <div class="recent-actions__row">-->
+<!--                                <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                    02.10.2023-->
+<!--                                </p>-->
+
+<!--                                <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                    20:00-->
+<!--                                </p>-->
+
+<!--                                <p class="recent-actions__cell recent-actions__cell_font" data-personal-account>-->
+<!--                                    Мышь (кот)-->
+<!--                                </p>-->
+
+<!--                                <p class="recent-actions__cell recent-actions__cell_font" data-status>-->
+<!--                                    Выполнен-->
+<!--                                </p>-->
+<!--                            </div>-->
+                        </div>
+                    </div>
+
+                    <form class="donation" method="POST" action="#">
+                        <h3 class="donation_h3">
+                            1.   Сумма пожертвования
+                        </h3>
+
+<!--                        https://snipp.ru/html-css/style-radio-->
+
+                        <div class="donation__radio-block">
+                            <fieldset class="donation__radio-cell">
+                                <input class="donation__radio" id="small" name="radio" value="150" type="radio" required>
+
+                                <label class="donation__radio_appearance" for="small">
+                                    150₽
+                                </label>
+                            </fieldset>
+
+                            <fieldset class="donation__radio-cell">
+                                <input class="donation__radio" id="medium" name="radio" value="250" type="radio" required>
+
+                                <label class="donation__radio_appearance" for="medium">
+                                    250₽
+                                </label>
+                            </fieldset>
+
+                            <fieldset class="donation__radio-cell">
+                                <input class="donation__radio" id="decent" name="radio" value="500" type="radio" required>
+
+                                <label class="donation__radio_appearance" for="decent">
+                                    500₽
+                                </label>
+                            </fieldset>
+
+                            <fieldset class="donation__radio-cell">
+                                <input class="donation__radio" id="many" name="radio" value="1000" type="radio" required>
+
+                                <label class="donation__radio_appearance" for="many">
+                                    1000₽
+                                </label>
+                            </fieldset>
+
+                            <fieldset class="donation__radio-cell">
+                                <input class="donation__radio" id="another" name="radio" value="another" type="radio" required>
+
+                                <label class="donation__radio_appearance" for="another">
+                                    Другая сумма
+                                </label>
+                            </fieldset>
+                        </div>
+
+                        <h3 class="donation_h3">
+                            2.   Цель пожертвования
+                        </h3>
+
+                        <div class="donation__purpose">
+                            <div class="donation__purpose-direction">
+                                <fieldset class="donation__purpose-cell">
+                                    <input class="donation__purpose-radio" id="pet"
+                                           name="direction" value="pet"
+                                           type="radio" required>
+
+                                    <label class="donation__purpose-radio_appearance" for="pet">
+                                        Питомец
+                                    </label>
+                                </fieldset>
+
+                                <fieldset class="donation__purpose-cell">
+                                    <input class="donation__purpose-radio" id="food" name="direction" value="food" type="radio" required>
+
+                                    <label class="donation__purpose-radio_appearance" for="food">
+                                        Корм
+                                    </label>
+                                </fieldset>
+
+                                <fieldset class="donation__purpose-cell">
+                                    <input class="donation__purpose-radio" id="medicines" name="direction" value="medicines" type="radio" required>
+
+                                    <label class="donation__purpose-radio_appearance" for="medicines">
+                                        Лекарства
+                                    </label>
+                                </fieldset>
+                            </div>
+                            
+                            <div class="donation__purpose-direction" data-some>
+                                <fieldset class="donation__purpose-cell" data-some>
+                                    <input class="donation__purpose-some" id="lucky"
+                                           name="purpose-some" value="Lucky"
+                                           type="radio" required>
+
+                                    <label class="donation__purpose-some_appearance" for="lucky">
+                                        Лаки (соб)
+                                    </label>
+                                </fieldset>
+
+                                <fieldset class="donation__purpose-cell" data-some>
+                                    <input class="donation__purpose-some" id="bim" name="purpose-some" value="Bim"
+                                           type="radio" required>
+
+                                    <label class="donation__purpose-some_appearance" for="bim">
+                                        Бим (соб)
+                                    </label>
+                                </fieldset>
+
+                                <fieldset class="donation__purpose-cell" data-some>
+                                    <input class="donation__purpose-some" id="martin" name="purpose-some"
+                                           value="Martin" type="radio" required>
+
+                                    <label class="donation__purpose-some_appearance" for="martin">
+                                        Мартин (кот)
+                                    </label>
+                                </fieldset>
+
+                                <fieldset class="donation__purpose-cell" data-some>
+                                    <input class="donation__purpose-some" id="mouse" name="purpose-some"
+                                           value="Mouse" type="radio" required>
+
+                                    <label class="donation__purpose-some_appearance" for="mouse">
+                                        Мышь (кот)
+                                    </label>
+                                </fieldset>
+                            </div>
+                        </div>
+
+                        <fieldset class="donation__submit">
+                            <input class="donation__submit_appearance" id="submit" name="submit" type="submit"
+                                   value="Пожертвовать">
                         </fieldset>
-
-                        <fieldset class="related-lists__flex-element">
-                            <label class="related-lists_font" for="gender">
-                                Пол
-                            </label>
-
-                            <select class="related-lists__select" id="gender" name="gender" required>
-                                <option value="" disabled>
-                                    Выберите
-                                </option>
-
-                                <option value="man">
-                                    Мальчик
-                                </option>
-
-                                <option value="woman">
-                                    Девочка
-                                </option>
-                            </select>
-
-                            <svg class="related-lists__arrow" width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="related-lists__arrow_size" d="M1 1L4.5 7L8 1" stroke="black" stroke-width="1.3"/>
-                            </svg>
-                        </fieldset>
-
-                        <fieldset class="related-lists__flex-element">
-                            <label class="related-lists_font" for="age">
-                                Возраст
-                            </label>
-
-                            <select class="related-lists__select" id="age" name="age" required>
-                                <option value="" disabled>
-                                    Выберите
-                                </option>
-
-                                <option value="2">
-                                    2 года
-                                </option>
-
-                                <option value="5">
-                                    5 лет
-                                </option>
-
-                                <option value="10">
-                                    10 лет
-                                </option>
-                            </select>
-
-                            <svg class="related-lists__arrow" width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="related-lists__arrow_size" d="M1 1L4.5 7L8 1" stroke="black" stroke-width="1.3"/>
-                            </svg>
-                        </fieldset>
-
-                        <input class="related-lists__button related-lists__button_appearance" type="submit" value="Найти">
                     </form>
-
-                    <img class="related-lists_image" src="../images/landing_page/header/pets.png" alt="image">
                 </div>
-            </div>
+            </header>
         </div>
     </div>
 
-    <main class="main">
-        <svg class="main__thread" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1038.9 964.4">
-            <defs>
-                <style>
-                    .cls-1{fill:none;stroke:#fe5b00;stroke-opacity:0.45;stroke-width:3px;}
-                </style>
-            </defs>
-            <g id="Слой_2" data-name="Слой 2">
-                <g id="Слой_1-2" data-name="Слой 1">
-                    <path class="cls-1" d="M1.5,0c0,227.07,374.13,8.45,482.67,156.51C646.57,378.05,1038.39,92,834.39,368s297.79,144.76-25.5,379.5C693.89,831,1038.37,963,1038.37,963"/>
-                </g>
-            </g>
-        </svg>
-
-        <section class="container about-us" data-aos="fade-right">
-            <div class="row about-us__flex-box">
-                <h2 class="heading" id="about-us">
-                    О приюте
-                </h2>
-
-                <p class="col-8 col-md-12 about-us_font about-us__text-container">
-                    Наша команда была собрана, чтобы помогать животным, которые столкнулись с жизненными трудностями. С кем-то  не справились, на кого-то не хватило времени, а на кого-то терпения.<br><br>У нас работают высококвалифицированные кинологи и фелинологи, а  также очень внимательные и чуткие волонтеры. Они смогут помочь скорректировать поведение животного, провести осмотр в ветклинике, и питомец будет готов отправиться в новый дом!
-                </p>
-
-                <div class="col-4 about-us__image">
-                    <img class="about-us__image_size" src="../images/landing_page/about-us/dog.png" alt="dog">
-                </div>
-
-                <ul class="col-6 col-md-12 about-us__ul">
-                    <li class="about-us__li">
-                        <span>17</span><br>лет работы
-                    </li>
-
-                    <li class="about-us__li">
-                        <span>60+</span><br>опытных сотрудников и волонтёров
-                    </li>
-
-                    <li class="about-us__li">
-                        <span>834</span><br>питомца нашли свой дом
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <svg class="main__thread" id="Слой_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 240 668" style="enable-background:new 0 0 240 668;"
-             xml:space="preserve">
-            <style type="text/css">
-                .st0{fill:none;stroke:#FE5B00;stroke-width:3;stroke-opacity:0.45;}
-            </style>
-            <g>
-                <path shape-rendering="crispEdges" class="st0" d="M0,600.9c193-138,287-233,210.5-439.9C169.2,70.8,90.5,228.1,0,50.9"/>
-            </g>
-        </svg>
-
-        <div class="our-pets__bg-box">
-            <svg class="our-pets__bg-box_bg" width="1324" height="730" viewBox="0 0 1024 733" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M651.194 700.219C785.318 767.719 942.268 674.716 998.635 611.686C1037.29 568.467 1020.27 364.896 1020.27 225.714C1020.27 127.515 962.284 199.999 878.883 103.561C795.481 7.12391 683.26 -7.37621 643.799 20.1155C404.892 186.553 88.3577 -161.72 3.47755e-06 103.561C3.47755e-06 103.561 -7.68562e-06 256.507 9.98939e-06 414.859C2.76644e-05 573.21 7.83376 656.87 137.35 717.769C266.865 778.668 517.069 632.719 651.194 700.219Z" fill="#FFECC6" fill-opacity="0.5"/>
-            </svg>
-        </div>
-
-        <section class="our-pets" data-aos="fade-right">
-            <div class="container our-pets__box">
-                <h2 class="heading" id="our-pets">
-                    Наши питомцы
-                </h2>
-
-                <div class="row our-pets__list-animals">
-                    <div class="col-6 col-sm-12 our-pets__animal-block">
-                        <img class="our-pets__image" src="../images/landing_page/our-pets/pet-1.png"
-                             alt="cat">
-
-                        <div class="our-pets__text-block">
-                            <h3 class="our-pets_heading">
-                                Молли
-                            </h3>
-
-                            <p class="our-pets_font">
-                                Пол: девочка<br>Возраст: 6 месяцев<br>Вес: 1,5 кг
-                            </p>
-
-                            <a href="#">
-                                <svg class="our-pets__arrow" width="31" height="8" viewBox="0 0 31 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M30.3536 4.35355C30.5488 4.15829 30.5488 3.84171 30.3536 3.64645L27.1716 0.464466C26.9763 0.269204 26.6597 0.269204 26.4645 0.464466C26.2692 0.659728 26.2692 0.976311 26.4645 1.17157L29.2929 4L26.4645 6.82843C26.2692 7.02369 26.2692 7.34027 26.4645 7.53553C26.6597 7.7308 26.9763 7.7308 27.1716 7.53553L30.3536 4.35355ZM0 4.5L30 4.5V3.5L0 3.5L0 4.5Z" fill="black"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-sm-12 our-pets__animal-block">
-                        <img class="our-pets__image" src="../images/landing_page/our-pets/pet-2.png" alt="cat">
-
-                        <div class="our-pets__text-block">
-                            <h3 class="our-pets_heading">
-                                Колин
-                            </h3>
-
-                            <p class="our-pets_font">
-                                Пол: мальчик<br>Возраст: 5 месяцев<br>Вес: 3 кг
-                            </p>
-
-                            <a href="#">
-                                <svg class="our-pets__arrow" width="31" height="8" viewBox="0 0 31 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M30.3536 4.35355C30.5488 4.15829 30.5488 3.84171 30.3536 3.64645L27.1716 0.464466C26.9763 0.269204 26.6597 0.269204 26.4645 0.464466C26.2692 0.659728 26.2692 0.976311 26.4645 1.17157L29.2929 4L26.4645 6.82843C26.2692 7.02369 26.2692 7.34027 26.4645 7.53553C26.6597 7.7308 26.9763 7.7308 27.1716 7.53553L30.3536 4.35355ZM0 4.5L30 4.5V3.5L0 3.5L0 4.5Z" fill="black"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-6 our-pets__animal-block">
-                        <img class="our-pets__image" src="../images/landing_page/our-pets/pet-3.png" alt="cat">
-
-                        <div class="our-pets__text-block">
-                            <h3 class="our-pets_heading">
-                                Лия
-                            </h3>
-
-                            <p class="our-pets_font">
-                                Пол: девочка<br>Возраст: 4 месяца<br>Вес: 6 кг
-                            </p>
-
-                            <a href="#">
-                                <svg class="our-pets__arrow" width="31" height="8" viewBox="0 0 31 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M30.3536 4.35355C30.5488 4.15829 30.5488 3.84171 30.3536 3.64645L27.1716 0.464466C26.9763 0.269204 26.6597 0.269204 26.4645 0.464466C26.2692 0.659728 26.2692 0.976311 26.4645 1.17157L29.2929 4L26.4645 6.82843C26.2692 7.02369 26.2692 7.34027 26.4645 7.53553C26.6597 7.7308 26.9763 7.7308 27.1716 7.53553L30.3536 4.35355ZM0 4.5L30 4.5V3.5L0 3.5L0 4.5Z" fill="black"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-6 our-pets__animal-block">
-                        <img class="our-pets__image" src="../images/landing_page/our-pets/pet-4.png" alt="cat">
-
-                        <div class="our-pets__text-block">
-                            <h3 class="our-pets_heading">
-                                Буч
-                            </h3>
-
-                            <p class="our-pets_font">
-                                Пол: мальчик<br>Возраст: 2 месяцев<br>Вес: 12 кг
-                            </p>
-
-                            <a href="#">
-                                <svg class="our-pets__arrow" width="31" height="8" viewBox="0 0 31 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M30.3536 4.35355C30.5488 4.15829 30.5488 3.84171 30.3536 3.64645L27.1716 0.464466C26.9763 0.269204 26.6597 0.269204 26.4645 0.464466C26.2692 0.659728 26.2692 0.976311 26.4645 1.17157L29.2929 4L26.4645 6.82843C26.2692 7.02369 26.2692 7.34027 26.4645 7.53553C26.6597 7.7308 26.9763 7.7308 27.1716 7.53553L30.3536 4.35355ZM0 4.5L30 4.5V3.5L0 3.5L0 4.5Z" fill="black"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="button">
-                    <button class="button_appearance" type="button">
-                        Все питомцы
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <section class="container help" data-aos="fade-right">
-            <h2 class="heading" id="help">
-                Как нам помочь
-            </h2>
-
-            <div class="row help__container">
-                <img class="col-6 col-md-12 help__image" src="../images/landing_page/help/cat.png" alt="cat">
-
-                <div class="col-6 col-md-12 help__text-container">
-                    <ul class="help__ul">
-                        <li class="help__li">
-                            Сделать небольшое пожертвование приюту
-                        </li>
-
-                        <li class="help__li">
-                            Помочь волонтерам с выгулом и уходом за питомцами
-                        </li>
-
-                        <li class="help__li">
-                            Привезти в приют различный инвентарь (лечебные корма, лекарства, поводки)
-                        </li>
-                    </ul>
-
-                    <div class="button">
-                        <button class="button_appearance" onclick="toggleLog()">
-                            Перейти
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
     <footer class="footer footer_bg">
-        <img class="main__thread" src="../images/landing_page/thread-3.svg" alt="thread">
-
         <div class="container">
             <div class="row footer__content-box">
                 <div class="col-2 col-md-6 logo">
@@ -461,10 +625,24 @@
         </div>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init();</script>
     <script src="../scripts/preloader.js"></script>
     <script src="../scripts/landing_page/burger.js"></script>
-    <script src="../scripts/landing_page/log.js"></script>
+    <script src="../scripts/personal_account/change-profile.js"></script>
+    <script src="../scripts/personal_account/switch-tabs.js"></script>
+    <script src="../scripts/personal_account/color-status.js"></script>
+    <script src="../scripts/personal_account/checked-radio-input.js"></script>
+
+    <script src="../scripts/ajax/applications/list-user-records.js"></script>
+
+    <script src="../scripts/ajax/applications/submit-application.js"></script>
+
+    <script src="../scripts/cookie/cookie.js"></script>
+    <script src="../scripts/cookie/checking-cookies.js"></script>
+
+    <script src="../scripts/ajax/profile/get-user-data.js"></script>
+    <script src="../scripts/ajax/profile/change-layout.js"></script>
+    <script src="../scripts/ajax/profile/edit-profile.js"></script>
+    <script src="../scripts/ajax/profile/exit.js"></script>
+    <script src="../scripts/ajax/profile/update-user-data.js"></script>
 </body>
 </html>

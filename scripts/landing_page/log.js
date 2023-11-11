@@ -2,18 +2,18 @@ const buttonExit = $('.log__exit');
 const log = $('.log');
 const logContent = $('.log__content');
 const blockAuthorization= `
-    <form class="log__content" data-authorization method="post" action="#">
+    <form class="log__content" data-authorization onsubmit="userAuthorization(event);">
         <img class="log__exit" src="../images/landing_page/log/exit.svg" alt="exit" onclick="toggleLog()">
     
         <h3 class="log__content_heading">
             Вход
         </h3>
     
-        <label class="log__content_font" for="email">
-            Эл. почта<span></span>
+        <label class="log__content_font" for="login">
+            Логин<span></span>
         </label>
     
-        <input class="log__input" id="email" name="email" type="text" required>
+        <input class="log__input" id="login" name="login" type="text" required>
     
         <label class="log__content_font" for="password">
             Пароль<span></span>
@@ -21,7 +21,7 @@ const blockAuthorization= `
     
         <input class="log__input" id="password" name="password" type="password" required>
     
-        <input class="log__submit log__submit_appearance" id="" type="submit" value="Регистрация">
+        <input class="log__submit log__submit_appearance" id="" type="submit" value="Войти">
     
         <p class="log__content_question-font">
             У вас нет аккаунта?
@@ -33,12 +33,24 @@ const blockAuthorization= `
     </form>
 `;
 const blockRegistration = `
-    <form class="log__content" method="post" action="#">
+    <form class="log__content" onsubmit="userRegistration(event);">
         <img class="log__exit" src="../images/landing_page/log/exit.svg" alt="exit" onclick="toggleLog()">
     
         <h3 class="log__content_heading">
-            Вход
+            Регистрация
         </h3>
+        
+        <label class="log__content_font" for="name">
+            Имя<span></span>
+        </label>
+    
+        <input class="log__input" id="name" name="name" type="text" required>
+        
+        <label class="log__content_font" for="login">
+            Логин<span></span>
+        </label>
+    
+        <input class="log__input" id="login" name="login" type="text" required>
     
         <label class="log__content_font" for="email">
             Эл. почта<span></span>
@@ -51,12 +63,6 @@ const blockRegistration = `
         </label>
     
         <input class="log__input" id="password" name="password" type="password" required>
-    
-        <label class="log__content_font" for="copy-password">
-            Повторите пароль<span></span>
-        </label>
-    
-        <input class="log__input" id="copy-password" name="copy-password" type="password" required>
     
         <input class="log__submit log__submit_appearance" id="" type="submit" value="Регистрация">
     

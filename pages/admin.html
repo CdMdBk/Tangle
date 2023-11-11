@@ -66,7 +66,7 @@
 
                     <li class="nav__li">
                         <a class="nav_font"
-                           href="index.php">
+                           href="index.html">
                             Главная страница
                         </a>
                     </li>
@@ -95,7 +95,7 @@
                         </li>
 
                         <li class="account-header__li">
-                            <a class="account-header__li_font" href="index.php">
+                            <a class="account-header__li_font" href="index.html">
                                 Выйти
                             </a>
                         </li>
@@ -253,11 +253,14 @@
                                 Корм (Ева)
                             </p>
 
-                            <p class="recent-actions__cell recent-actions__cell_font" data-status>
+                            <p class="recent-actions__cell recent-actions__cell_font"
+                               data-status
+                               id="">
                                 Ожидает
                             </p>
 
-                            <select class="recent-actions__cell recent-actions__cell_font recent-actions_inactive" id="" name="status"
+                            <select class="recent-actions__cell recent-actions__cell_font recent-actions_inactive"
+                                    name="status"
                                     data-status-select>
                                 <option value="waiting">
                                     Ожидает
@@ -586,5 +589,14 @@
     <script src="../scripts/personal_account/color-status.js"></script>
     <script src="../scripts/admin/toggle-show.js"></script>
     <script src="../scripts/admin/range-input.js"></script>
+
+    <script src="../scripts/ajax/applications/change-statuts.js"></script>
+    <script src="../scripts/ajax/applications/list-records.js"></script>
+
+    <script src="../scripts/cookie/cookie.js"></script>
+    <script src="../scripts/cookie/checking-cookies.js"></script>
+
+    <script src="../scripts/ajax/filters/get-filter-list-records.js"></script>
+    <script src="../scripts/ajax/report/report.js"></script>
 </body>
 </html>
