@@ -20,5 +20,6 @@ document.querySelector('.my-profile__submit_appearance').addEventListener('click
         return response.json();
     }).then(data => {
         changePersonalData(data.data);
+        getUserData();
     });
 })

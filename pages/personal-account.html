@@ -68,7 +68,7 @@
 
                     <li class="nav__li">
                         <a class="nav_font"
-                           href="index.html">
+                           onclick="exitAccount(event);">
                             Выход
                         </a>
                     </li>
@@ -234,166 +234,22 @@
                         </h3>
 
                         <div class="recent-actions">
-                            <div class="recent-actions__row">
-                                <h4 class="recent-actions__cell recent-actions__cell_font">
-                                    Дата
-                                </h4>
-
-                                <h4 class="recent-actions__cell recent-actions__cell_font">
-                                    Время
-                                </h4>
-
-                                <h4 class="recent-actions__cell recent-actions__cell_font" data-personal-account>
-                                    Цель пожертвования
-                                </h4>
-
-                                <h4 class="recent-actions__cell recent-actions__cell_font">
-                                    Статус заявки
-                                </h4>
-                            </div>
-
 <!--                            <div class="recent-actions__row">-->
-<!--                                <p class="recent-actions__cell recent-actions__cell_font">-->
-<!--                                    02.10.2023-->
-<!--                                </p>-->
+<!--                                <h4 class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                    Дата-->
+<!--                                </h4>-->
 
-<!--                                <p class="recent-actions__cell recent-actions__cell_font">-->
-<!--                                    20:00-->
-<!--                                </p>-->
+<!--                                <h4 class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                    Время-->
+<!--                                </h4>-->
 
-<!--                                <p class="recent-actions__cell recent-actions__cell_font" data-personal-account>-->
-<!--                                    Мышь (кот)-->
-<!--                                </p>-->
+<!--                                <h4 class="recent-actions__cell recent-actions__cell_font" data-personal-account>-->
+<!--                                    Цель пожертвования-->
+<!--                                </h4>-->
 
-<!--                                <p class="recent-actions__cell recent-actions__cell_font" data-status>-->
-<!--                                    Выполнен-->
-<!--                                </p>-->
-<!--                            </div>-->
-
-<!--                            <div class="recent-actions__row">-->
-<!--                                <p class="recent-actions__cell recent-actions__cell_font">-->
-<!--                                    02.10.2023-->
-<!--                                </p>-->
-
-<!--                                <p class="recent-actions__cell recent-actions__cell_font">-->
-<!--                                    20:00-->
-<!--                                </p>-->
-
-<!--                                <p class="recent-actions__cell recent-actions__cell_font" data-personal-account>-->
-<!--                                    Мышь (кот)-->
-<!--                                </p>-->
-
-<!--                                <p class="recent-actions__cell recent-actions__cell_font" data-status>-->
-<!--                                    Ожидает-->
-<!--                                </p>-->
-<!--                            </div>-->
-
-<!--                            <div class="recent-actions__row">-->
-<!--                                <p class="recent-actions__cell recent-actions__cell_font">-->
-<!--                                    02.10.2023-->
-<!--                                </p>-->
-
-<!--                                <p class="recent-actions__cell recent-actions__cell_font">-->
-<!--                                    20:00-->
-<!--                                </p>-->
-
-<!--                                <p class="recent-actions__cell recent-actions__cell_font" data-personal-account>-->
-<!--                                    Мышь (кот)-->
-<!--                                </p>-->
-
-<!--                                <p class="recent-actions__cell recent-actions__cell_font" data-status>-->
-<!--                                    Получен-->
-<!--                                </p>-->
-<!--                            </div>-->
-
-<!--                            <div class="recent-actions__row">-->
-<!--                                <p class="recent-actions__cell recent-actions__cell_font">-->
-<!--                                    02.10.2023-->
-<!--                                </p>-->
-
-<!--                                <p class="recent-actions__cell recent-actions__cell_font">-->
-<!--                                    20:00-->
-<!--                                </p>-->
-
-<!--                                <p class="recent-actions__cell recent-actions__cell_font" data-personal-account>-->
-<!--                                    Мышь (кот)-->
-<!--                                </p>-->
-
-<!--                                <p class="recent-actions__cell recent-actions__cell_font" data-status>-->
-<!--                                    Отклонён-->
-<!--                                </p>-->
-<!--                            </div>-->
-
-<!--                            <div class="recent-actions__row">-->
-<!--                                <p class="recent-actions__cell recent-actions__cell_font">-->
-<!--                                    02.10.2023-->
-<!--                                </p>-->
-
-<!--                                <p class="recent-actions__cell recent-actions__cell_font">-->
-<!--                                    20:00-->
-<!--                                </p>-->
-
-<!--                                <p class="recent-actions__cell recent-actions__cell_font" data-personal-account>-->
-<!--                                    Мышь (кот)-->
-<!--                                </p>-->
-
-<!--                                <p class="recent-actions__cell recent-actions__cell_font" data-status>-->
-<!--                                    Ожидает-->
-<!--                                </p>-->
-<!--                            </div>-->
-
-<!--                            <div class="recent-actions__row">-->
-<!--                                <p class="recent-actions__cell recent-actions__cell_font">-->
-<!--                                    02.10.2023-->
-<!--                                </p>-->
-
-<!--                                <p class="recent-actions__cell recent-actions__cell_font">-->
-<!--                                    20:00-->
-<!--                                </p>-->
-
-<!--                                <p class="recent-actions__cell recent-actions__cell_font" data-personal-account>-->
-<!--                                    Мышь (кот)-->
-<!--                                </p>-->
-
-<!--                                <p class="recent-actions__cell recent-actions__cell_font" data-status>-->
-<!--                                    Отклонён-->
-<!--                                </p>-->
-<!--                            </div>-->
-
-<!--                            <div class="recent-actions__row">-->
-<!--                                <p class="recent-actions__cell recent-actions__cell_font">-->
-<!--                                    02.10.2023-->
-<!--                                </p>-->
-
-<!--                                <p class="recent-actions__cell recent-actions__cell_font">-->
-<!--                                    20:00-->
-<!--                                </p>-->
-
-<!--                                <p class="recent-actions__cell recent-actions__cell_font" data-personal-account>-->
-<!--                                    Мышь (кот)-->
-<!--                                </p>-->
-
-<!--                                <p class="recent-actions__cell recent-actions__cell_font" data-status>-->
-<!--                                    Ожидает-->
-<!--                                </p>-->
-<!--                            </div>-->
-
-<!--                            <div class="recent-actions__row">-->
-<!--                                <p class="recent-actions__cell recent-actions__cell_font">-->
-<!--                                    02.10.2023-->
-<!--                                </p>-->
-
-<!--                                <p class="recent-actions__cell recent-actions__cell_font">-->
-<!--                                    20:00-->
-<!--                                </p>-->
-
-<!--                                <p class="recent-actions__cell recent-actions__cell_font" data-personal-account>-->
-<!--                                    Мышь (кот)-->
-<!--                                </p>-->
-
-<!--                                <p class="recent-actions__cell recent-actions__cell_font" data-status>-->
-<!--                                    Выполнен-->
-<!--                                </p>-->
+<!--                                <h4 class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                    Статус заявки-->
+<!--                                </h4>-->
 <!--                            </div>-->
                         </div>
                     </div>
@@ -402,8 +258,6 @@
                         <h3 class="donation_h3">
                             1.   Сумма пожертвования
                         </h3>
-
-<!--                        https://snipp.ru/html-css/style-radio-->
 
                         <div class="donation__radio-block">
                             <fieldset class="donation__radio-cell">
@@ -454,70 +308,45 @@
                         <div class="donation__purpose">
                             <div class="donation__purpose-direction">
                                 <fieldset class="donation__purpose-cell">
-                                    <input class="donation__purpose-radio" id="pet"
-                                           name="direction" value="pet"
-                                           type="radio" required>
+                                    <input class="donation__purpose-radio"
+                                           id="medicines"
+                                           name="groups"
+                                           type="radio"
+                                           required>
 
-                                    <label class="donation__purpose-radio_appearance" for="pet">
-                                        Питомец
-                                    </label>
+                                    <label class="donation__purpose-radio_appearance"
+                                           for="medicines"
+                                           data-groups></label>
                                 </fieldset>
 
                                 <fieldset class="donation__purpose-cell">
-                                    <input class="donation__purpose-radio" id="food" name="direction" value="food" type="radio" required>
+                                    <input class="donation__purpose-radio"
+                                           id="food"
+                                           name="groups"
+                                           type="radio"
+                                           required>
 
-                                    <label class="donation__purpose-radio_appearance" for="food">
-                                        Корм
-                                    </label>
+                                    <label class="donation__purpose-radio_appearance"
+                                           for="food"
+                                           data-groups></label>
                                 </fieldset>
 
                                 <fieldset class="donation__purpose-cell">
-                                    <input class="donation__purpose-radio" id="medicines" name="direction" value="medicines" type="radio" required>
+                                    <input class="donation__purpose-radio"
+                                           id="animals"
+                                           name="groups"
+                                           type="radio"
+                                           required>
 
-                                    <label class="donation__purpose-radio_appearance" for="medicines">
-                                        Лекарства
-                                    </label>
+                                    <label class="donation__purpose-radio_appearance"
+                                           for="animals"
+                                           data-groups></label>
                                 </fieldset>
                             </div>
                             
-                            <div class="donation__purpose-direction" data-some>
-                                <fieldset class="donation__purpose-cell" data-some>
-                                    <input class="donation__purpose-some" id="lucky"
-                                           name="purpose-some" value="Lucky"
-                                           type="radio" required>
+                            <div class="donation__purpose-direction" data-some></div>
 
-                                    <label class="donation__purpose-some_appearance" for="lucky">
-                                        Лаки (соб)
-                                    </label>
-                                </fieldset>
-
-                                <fieldset class="donation__purpose-cell" data-some>
-                                    <input class="donation__purpose-some" id="bim" name="purpose-some" value="Bim"
-                                           type="radio" required>
-
-                                    <label class="donation__purpose-some_appearance" for="bim">
-                                        Бим (соб)
-                                    </label>
-                                </fieldset>
-
-                                <fieldset class="donation__purpose-cell" data-some>
-                                    <input class="donation__purpose-some" id="martin" name="purpose-some"
-                                           value="Martin" type="radio" required>
-
-                                    <label class="donation__purpose-some_appearance" for="martin">
-                                        Мартин (кот)
-                                    </label>
-                                </fieldset>
-
-                                <fieldset class="donation__purpose-cell" data-some>
-                                    <input class="donation__purpose-some" id="mouse" name="purpose-some"
-                                           value="Mouse" type="radio" required>
-
-                                    <label class="donation__purpose-some_appearance" for="mouse">
-                                        Мышь (кот)
-                                    </label>
-                                </fieldset>
-                            </div>
+                            <div class="donation__purpose-direction" data-some></div>
                         </div>
 
                         <fieldset class="donation__submit">
@@ -632,17 +461,17 @@
     <script src="../scripts/personal_account/color-status.js"></script>
     <script src="../scripts/personal_account/checked-radio-input.js"></script>
 
-    <script src="../scripts/ajax/applications/list-user-records.js"></script>
-
-    <script src="../scripts/ajax/applications/submit-application.js"></script>
-
     <script src="../scripts/cookie/cookie.js"></script>
     <script src="../scripts/cookie/checking-cookies.js"></script>
 
     <script src="../scripts/ajax/profile/get-user-data.js"></script>
+
     <script src="../scripts/ajax/profile/change-layout.js"></script>
-    <script src="../scripts/ajax/profile/edit-profile.js"></script>
-    <script src="../scripts/ajax/profile/exit.js"></script>
     <script src="../scripts/ajax/profile/update-user-data.js"></script>
+    <script src="../scripts/ajax/profile/exit.js"></script>
+
+    <script src="../scripts/ajax/applications/list-user-records.js"></script>
+    <script src="../scripts/ajax/applications/related-lists.js"></script>
+    <script src="../scripts/ajax/applications/submit-application.js"></script>
 </body>
 </html>

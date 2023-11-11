@@ -16,6 +16,7 @@ function updateColorStatus() {
                 element.style.color = `#444`;
                 break;
             case 'Отклонён':
+            case 'Отклонен':
                 element.style.color = `red`;
         }
     });

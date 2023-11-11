@@ -22,9 +22,13 @@ function userAuthorization(event) {
         if (data.message_error) {
             alert(data.message_error);
         } else {
-            document.cookie = `token=${data.access_token}; expires=${new Date(Date.now() + data.expires_in)}`;
+            document.cookie = `token=${data.access_token}; expires=${new Date(Date.now() + data.expires_in*24)}`;
 
-            window.location.href = 'personal-account.html';
+            if (arrayData.login === 'admin') {
+                window.location.href = 'admin.html';
+            } else {
+                window.location.href = 'personal-account.html';
+            }
         }
     });
 }

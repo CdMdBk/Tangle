@@ -42,32 +42,11 @@
 
                 <div class="col-md-6 nav__burger"><span></span></div>
 
-                <ul class="col-7 col-md-12 nav__ul">
+                <ul class="col-7 col-md-12 nav__ul" style="justify-content: flex-end">
                     <li class="nav__li">
                         <a class="nav_font"
-                           href="#about-us">
-                            О приюте
-                        </a>
-                    </li>
-
-                    <li class="nav__li">
-                        <a class="nav_font"
-                           href="#our-pets">
-                            Наши питомцы
-                        </a>
-                    </li>
-
-                    <li class="nav__li">
-                        <a class="nav_font"
-                           href="#help">
-                            Помощь
-                        </a>
-                    </li>
-
-                    <li class="nav__li">
-                        <a class="nav_font"
-                           href="index.html">
-                            Главная страница
+                           onclick="exitAccount(event);">
+                            Выход
                         </a>
                     </li>
                 </ul>
@@ -95,7 +74,8 @@
                         </li>
 
                         <li class="account-header__li">
-                            <a class="account-header__li_font" href="index.html">
+                            <a class="account-header__li_font"
+                               onclick="exitAccount(event);">
                                 Выйти
                             </a>
                         </li>
@@ -214,358 +194,358 @@
                     </form>
 
                     <div class="recent-actions" data-admin>
-                        <div class="recent-actions__row">
-                            <h4 class="recent-actions__cell recent-actions__cell_font">
-                                Дата
-                            </h4>
-
-                            <h4 class="recent-actions__cell recent-actions__cell_font">
-                                ФИО
-                            </h4>
-
-                            <h4 class="recent-actions__cell recent-actions__cell_font">
-                                Сумма
-                            </h4>
-
-                            <h4 class="recent-actions__cell recent-actions__cell_font">
-                                Цель<br>пожертвования
-                            </h4>
-
-                            <h4 class="recent-actions__cell recent-actions__cell_font">
-                                Статус заявки
-                            </h4>
-                        </div>
-
-                        <div class="recent-actions__row">
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                30.10.2023
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                Лыкова О.
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                3400₽
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                Корм (Ева)
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font"
-                               data-status
-                               id="">
-                                Ожидает
-                            </p>
-
-                            <select class="recent-actions__cell recent-actions__cell_font recent-actions_inactive"
-                                    name="status"
-                                    data-status-select>
-                                <option value="waiting">
-                                    Ожидает
-                                </option>
-
-                                <option value="received">
-                                    Получен
-                                </option>
-
-                                <option value="completed">
-                                    Выполнен
-                                </option>
-
-                                <option value="rejected">
-                                    Отклонён
-                                </option>
-                            </select>
-                        </div>
-
-                        <div class="recent-actions__row">
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                30.10.2023
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                Лыкова О.
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                3400₽
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                Корм (Ева)
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font" data-status>
-                                Ожидает
-                            </p>
-
-                            <select class="recent-actions__cell recent-actions__cell_font recent-actions_inactive" id="" name="status"
-                                    data-status-select>
-                                <option value="waiting">
-                                    Ожидает
-                                </option>
-
-                                <option value="received">
-                                    Получен
-                                </option>
-
-                                <option value="completed">
-                                    Выполнен
-                                </option>
-
-                                <option value="rejected">
-                                    Отклонён
-                                </option>
-                            </select>
-                        </div>
-
-                        <div class="recent-actions__row">
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                30.10.2023
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                Лыкова О.
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                3400₽
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                Корм (Ева)
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font" data-status>
-                                Ожидает
-                            </p>
-
-                            <select class="recent-actions__cell recent-actions__cell_font recent-actions_inactive" id="" name="status"
-                                    data-status-select>
-                                <option value="waiting">
-                                    Ожидает
-                                </option>
-
-                                <option value="received">
-                                    Получен
-                                </option>
-
-                                <option value="completed">
-                                    Выполнен
-                                </option>
-
-                                <option value="rejected">
-                                    Отклонён
-                                </option>
-                            </select>
-                        </div>
-
-                        <div class="recent-actions__row">
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                30.10.2023
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                Лыкова О.
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                3400₽
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                Корм (Ева)
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font" data-status>
-                                Выполнен
-                            </p>
-
-                            <select class="recent-actions__cell recent-actions__cell_font recent-actions_inactive" id="" name="status"
-                                    data-status-select>
-                                <option value="waiting">
-                                    Ожидает
-                                </option>
-
-                                <option value="received">
-                                    Получен
-                                </option>
-
-                                <option value="completed">
-                                    Выполнен
-                                </option>
-
-                                <option value="rejected">
-                                    Отклонён
-                                </option>
-                            </select>
-                        </div>
-
-                        <div class="recent-actions__row">
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                30.10.2023
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                Лыкова О.
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                3400₽
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                Корм (Ева)
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font" data-status>
-                                Ожидает
-                            </p>
-
-                            <select class="recent-actions__cell recent-actions__cell_font recent-actions_inactive" id="" name="status"
-                                    data-status-select>
-                                <option value="waiting">
-                                    Ожидает
-                                </option>
-
-                                <option value="received">
-                                    Получен
-                                </option>
-
-                                <option value="completed">
-                                    Выполнен
-                                </option>
-
-                                <option value="rejected">
-                                    Отклонён
-                                </option>
-                            </select>
-                        </div>
-
-                        <div class="recent-actions__row">
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                30.10.2023
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                Лыкова О.
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                3400₽
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                Корм (Ева)
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font" data-status>
-                                Получен
-                            </p>
-
-                            <select class="recent-actions__cell recent-actions__cell_font recent-actions_inactive" id="" name="status"
-                                    data-status-select>
-                                <option value="waiting">
-                                    Ожидает
-                                </option>
-
-                                <option value="received">
-                                    Получен
-                                </option>
-
-                                <option value="completed">
-                                    Выполнен
-                                </option>
-
-                                <option value="rejected">
-                                    Отклонён
-                                </option>
-                            </select>
-                        </div>
-
-                        <div class="recent-actions__row">
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                30.10.2023
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                Лыкова О.
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                3400₽
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                Корм (Ева)
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font" data-status>
-                                Отклонён
-                            </p>
-
-                            <select class="recent-actions__cell recent-actions__cell_font recent-actions_inactive" id="" name="status"
-                                    data-status-select>
-                                <option value="waiting">
-                                    Ожидает
-                                </option>
-
-                                <option value="received">
-                                    Получен
-                                </option>
-
-                                <option value="completed">
-                                    Выполнен
-                                </option>
-
-                                <option value="rejected">
-                                    Отклонён
-                                </option>
-                            </select>
-                        </div>
-
-                        <div class="recent-actions__row">
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                30.10.2023
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                Лыкова О.
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                3400₽
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font">
-                                Корм (Ева)
-                            </p>
-
-                            <p class="recent-actions__cell recent-actions__cell_font" data-status>
-                                Ожидает
-                            </p>
-
-                            <select class="recent-actions__cell recent-actions__cell_font recent-actions_inactive" id="" name="status"
-                                    data-status-select>
-                                <option value="waiting">
-                                    Ожидает
-                                </option>
-
-                                <option value="received">
-                                    Получен
-                                </option>
-
-                                <option value="completed">
-                                    Выполнен
-                                </option>
-
-                                <option value="rejected">
-                                    Отклонён
-                                </option>
-                            </select>
-                        </div>
+<!--                        <div class="recent-actions__row">-->
+<!--                            <h4 class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                Дата-->
+<!--                            </h4>-->
+
+<!--                            <h4 class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                Имя-->
+<!--                            </h4>-->
+
+<!--                            <h4 class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                Сумма-->
+<!--                            </h4>-->
+
+<!--                            <h4 class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                Цель<br>пожертвования-->
+<!--                            </h4>-->
+
+<!--                            <h4 class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                Статус заявки-->
+<!--                            </h4>-->
+<!--                        </div>-->
+
+<!--                        <div class="recent-actions__row">-->
+<!--                            <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                30.10.2023-->
+<!--                            </p>-->
+
+<!--                            <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                Лыкова О.-->
+<!--                            </p>-->
+
+<!--                            <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                3400₽-->
+<!--                            </p>-->
+
+<!--                            <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                Корм (Ева)-->
+<!--                            </p>-->
+
+<!--                            <p class="recent-actions__cell recent-actions__cell_font"-->
+<!--                               data-status-->
+<!--                               id="">-->
+<!--                                Ожидает-->
+<!--                            </p>-->
+
+<!--                            <select class="recent-actions__cell recent-actions__cell_font recent-actions_inactive"-->
+<!--                                    name="status"-->
+<!--                                    data-status-select>-->
+<!--                                <option value="waiting">-->
+<!--                                    Ожидает-->
+<!--                                </option>-->
+
+<!--                                <option value="received">-->
+<!--                                    Получен-->
+<!--                                </option>-->
+
+<!--                                <option value="completed">-->
+<!--                                    Выполнен-->
+<!--                                </option>-->
+
+<!--                                <option value="rejected">-->
+<!--                                    Отклонён-->
+<!--                                </option>-->
+<!--                            </select>-->
+<!--                        </div>-->
+
+<!--                        <div class="recent-actions__row">-->
+<!--                            <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                30.10.2023-->
+<!--                            </p>-->
+
+<!--                            <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                Лыкова О.-->
+<!--                            </p>-->
+
+<!--                            <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                3400₽-->
+<!--                            </p>-->
+
+<!--                            <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                Корм (Ева)-->
+<!--                            </p>-->
+
+<!--                            <p class="recent-actions__cell recent-actions__cell_font" data-status>-->
+<!--                                Ожидает-->
+<!--                            </p>-->
+
+<!--                            <select class="recent-actions__cell recent-actions__cell_font recent-actions_inactive" id="" name="status"-->
+<!--                                    data-status-select>-->
+<!--                                <option value="waiting">-->
+<!--                                    Ожидает-->
+<!--                                </option>-->
+
+<!--                                <option value="received">-->
+<!--                                    Получен-->
+<!--                                </option>-->
+
+<!--                                <option value="completed">-->
+<!--                                    Выполнен-->
+<!--                                </option>-->
+
+<!--                                <option value="rejected">-->
+<!--                                    Отклонён-->
+<!--                                </option>-->
+<!--                            </select>-->
+<!--                        </div>-->
+
+<!--                        <div class="recent-actions__row">-->
+<!--                            <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                30.10.2023-->
+<!--                            </p>-->
+
+<!--                            <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                Лыкова О.-->
+<!--                            </p>-->
+
+<!--                            <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                3400₽-->
+<!--                            </p>-->
+
+<!--                            <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                Корм (Ева)-->
+<!--                            </p>-->
+
+<!--                            <p class="recent-actions__cell recent-actions__cell_font" data-status>-->
+<!--                                Ожидает-->
+<!--                            </p>-->
+
+<!--                            <select class="recent-actions__cell recent-actions__cell_font recent-actions_inactive" id="" name="status"-->
+<!--                                    data-status-select>-->
+<!--                                <option value="waiting">-->
+<!--                                    Ожидает-->
+<!--                                </option>-->
+
+<!--                                <option value="received">-->
+<!--                                    Получен-->
+<!--                                </option>-->
+
+<!--                                <option value="completed">-->
+<!--                                    Выполнен-->
+<!--                                </option>-->
+
+<!--                                <option value="rejected">-->
+<!--                                    Отклонён-->
+<!--                                </option>-->
+<!--                            </select>-->
+<!--                        </div>-->
+
+<!--                        <div class="recent-actions__row">-->
+<!--                            <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                30.10.2023-->
+<!--                            </p>-->
+
+<!--                            <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                Лыкова О.-->
+<!--                            </p>-->
+
+<!--                            <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                3400₽-->
+<!--                            </p>-->
+
+<!--                            <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                Корм (Ева)-->
+<!--                            </p>-->
+
+<!--                            <p class="recent-actions__cell recent-actions__cell_font" data-status>-->
+<!--                                Выполнен-->
+<!--                            </p>-->
+
+<!--                            <select class="recent-actions__cell recent-actions__cell_font recent-actions_inactive" id="" name="status"-->
+<!--                                    data-status-select>-->
+<!--                                <option value="waiting">-->
+<!--                                    Ожидает-->
+<!--                                </option>-->
+
+<!--                                <option value="received">-->
+<!--                                    Получен-->
+<!--                                </option>-->
+
+<!--                                <option value="completed">-->
+<!--                                    Выполнен-->
+<!--                                </option>-->
+
+<!--                                <option value="rejected">-->
+<!--                                    Отклонён-->
+<!--                                </option>-->
+<!--                            </select>-->
+<!--                        </div>-->
+
+<!--                        <div class="recent-actions__row">-->
+<!--                            <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                30.10.2023-->
+<!--                            </p>-->
+
+<!--                            <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                Лыкова О.-->
+<!--                            </p>-->
+
+<!--                            <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                3400₽-->
+<!--                            </p>-->
+
+<!--                            <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                Корм (Ева)-->
+<!--                            </p>-->
+
+<!--                            <p class="recent-actions__cell recent-actions__cell_font" data-status>-->
+<!--                                Ожидает-->
+<!--                            </p>-->
+
+<!--                            <select class="recent-actions__cell recent-actions__cell_font recent-actions_inactive" id="" name="status"-->
+<!--                                    data-status-select>-->
+<!--                                <option value="waiting">-->
+<!--                                    Ожидает-->
+<!--                                </option>-->
+
+<!--                                <option value="received">-->
+<!--                                    Получен-->
+<!--                                </option>-->
+
+<!--                                <option value="completed">-->
+<!--                                    Выполнен-->
+<!--                                </option>-->
+
+<!--                                <option value="rejected">-->
+<!--                                    Отклонён-->
+<!--                                </option>-->
+<!--                            </select>-->
+<!--                        </div>-->
+
+<!--                        <div class="recent-actions__row">-->
+<!--                            <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                30.10.2023-->
+<!--                            </p>-->
+
+<!--                            <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                Лыкова О.-->
+<!--                            </p>-->
+
+<!--                            <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                3400₽-->
+<!--                            </p>-->
+
+<!--                            <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                Корм (Ева)-->
+<!--                            </p>-->
+
+<!--                            <p class="recent-actions__cell recent-actions__cell_font" data-status>-->
+<!--                                Получен-->
+<!--                            </p>-->
+
+<!--                            <select class="recent-actions__cell recent-actions__cell_font recent-actions_inactive" id="" name="status"-->
+<!--                                    data-status-select>-->
+<!--                                <option value="waiting">-->
+<!--                                    Ожидает-->
+<!--                                </option>-->
+
+<!--                                <option value="received">-->
+<!--                                    Получен-->
+<!--                                </option>-->
+
+<!--                                <option value="completed">-->
+<!--                                    Выполнен-->
+<!--                                </option>-->
+
+<!--                                <option value="rejected">-->
+<!--                                    Отклонён-->
+<!--                                </option>-->
+<!--                            </select>-->
+<!--                        </div>-->
+
+<!--                        <div class="recent-actions__row">-->
+<!--                            <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                30.10.2023-->
+<!--                            </p>-->
+
+<!--                            <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                Лыкова О.-->
+<!--                            </p>-->
+
+<!--                            <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                3400₽-->
+<!--                            </p>-->
+
+<!--                            <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                Корм (Ева)-->
+<!--                            </p>-->
+
+<!--                            <p class="recent-actions__cell recent-actions__cell_font" data-status>-->
+<!--                                Отклонён-->
+<!--                            </p>-->
+
+<!--                            <select class="recent-actions__cell recent-actions__cell_font recent-actions_inactive" id="" name="status"-->
+<!--                                    data-status-select>-->
+<!--                                <option value="waiting">-->
+<!--                                    Ожидает-->
+<!--                                </option>-->
+
+<!--                                <option value="received">-->
+<!--                                    Получен-->
+<!--                                </option>-->
+
+<!--                                <option value="completed">-->
+<!--                                    Выполнен-->
+<!--                                </option>-->
+
+<!--                                <option value="rejected">-->
+<!--                                    Отклонён-->
+<!--                                </option>-->
+<!--                            </select>-->
+<!--                        </div>-->
+
+<!--                        <div class="recent-actions__row">-->
+<!--                            <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                30.10.2023-->
+<!--                            </p>-->
+
+<!--                            <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                Лыкова О.-->
+<!--                            </p>-->
+
+<!--                            <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                3400₽-->
+<!--                            </p>-->
+
+<!--                            <p class="recent-actions__cell recent-actions__cell_font">-->
+<!--                                Корм (Ева)-->
+<!--                            </p>-->
+
+<!--                            <p class="recent-actions__cell recent-actions__cell_font" data-status>-->
+<!--                                Ожидает-->
+<!--                            </p>-->
+
+<!--                            <select class="recent-actions__cell recent-actions__cell_font recent-actions_inactive" id="" name="status"-->
+<!--                                    data-status-select>-->
+<!--                                <option value="waiting">-->
+<!--                                    Ожидает-->
+<!--                                </option>-->
+
+<!--                                <option value="received">-->
+<!--                                    Получен-->
+<!--                                </option>-->
+
+<!--                                <option value="completed">-->
+<!--                                    Выполнен-->
+<!--                                </option>-->
+
+<!--                                <option value="rejected">-->
+<!--                                    Отклонён-->
+<!--                                </option>-->
+<!--                            </select>-->
+<!--                        </div>-->
                     </div>
                 </div>
             </header>
@@ -573,6 +553,9 @@
             <div class="admin-buttons">
                 <button class="admin-buttons_appearance">
                     Изменить статус
+                </button>
+                <button class="admin-buttons_appearance" style="display: none" data-status-save>
+                    Сохранить
                 </button>
 
                 <button class="admin-buttons_appearance">
@@ -590,11 +573,13 @@
     <script src="../scripts/admin/toggle-show.js"></script>
     <script src="../scripts/admin/range-input.js"></script>
 
-    <script src="../scripts/ajax/applications/change-statuts.js"></script>
-    <script src="../scripts/ajax/applications/list-records.js"></script>
-
     <script src="../scripts/cookie/cookie.js"></script>
     <script src="../scripts/cookie/checking-cookies.js"></script>
+
+    <script src="../scripts/ajax/profile/exit.js"></script>
+
+    <script src="../scripts/ajax/applications/list-records.js"></script>
+    <script src="../scripts/ajax/applications/change-status.js"></script>
 
     <script src="../scripts/ajax/filters/get-filter-list-records.js"></script>
     <script src="../scripts/ajax/report/report.js"></script>

@@ -59,18 +59,17 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
-    width: 50%;
+    width: 90%;
 }
 
 .donation__purpose-direction {
-    width: 50%;
+    width: 30%;
 }
 
 .donation__purpose-direction[data-some] {
-    width: 45%;
     background-color: rgba(255, 230, 0, 0.15);
     border-radius: 16px;
-    padding: 10px 20px;
+    padding: 16px;
 }
 
 .donation__purpose-cell {
@@ -79,7 +78,7 @@
 }
 
 .donation__purpose-cell[data-some] {
-    height: 26px;
+    min-height: 26px;
 }
 
 .donation__purpose-cell:not(:last-child) {
@@ -104,6 +103,9 @@
     padding: 4px 10px;
     border-radius: 10px;
 }
+
+.donation__purpose-some_appearance_checked {}
+
 
 .donation__submit {
     display: flex;

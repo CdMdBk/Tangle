@@ -1,42 +1,50 @@
-let user = ['.'];
-
-fetch('', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json;charset=utf-8'
-    },
-    body: JSON.stringify()
-}).then(response => {
-    return response.json(user);
-}).then(data => {
-    console.log(data);
-
+function setApplicationsUser() {
+    let {applications} = userData;
     let blockRecord = '';
-    for (let i = 0; i < data.length; i++) {
+
+    document.querySelector('.recent-actions').innerHTML = `
+        <div class="recent-actions__row">
+            <h4 class="recent-actions__cell recent-actions__cell_font">
+                Дата
+            </h4>
+
+            <h4 class="recent-actions__cell recent-actions__cell_font">
+                Время
+            </h4>
+
+            <h4 class="recent-actions__cell recent-actions__cell_font" data-personal-account>
+                Цель пожертвования
+            </h4>
+
+            <h4 class="recent-actions__cell recent-actions__cell_font">
+                Статус заявки
+            </h4>
+        </div>
+    `;
+
+    for (let i = 0; i < applications.length; i++) {
         blockRecord = `
             <div class="recent-actions__row">
                 <p class="recent-actions__cell recent-actions__cell_font">
-                    02.10.2023
-                    ${data[i]['fds']}
+                    ${applications[i].created_at.slice(0, applications[i].created_at.indexOf('T'))}
                 </p>
 
                 <p class="recent-actions__cell recent-actions__cell_font">
-                    20:00
-                    ${data[i]['fds']}
+                    ${applications[i].created_at.slice(applications[i].created_at.indexOf('T') + 1, applications[i].created_at.indexOf('.'))}
                 </p>
 
                 <p class="recent-actions__cell recent-actions__cell_font" data-personal-account>
-                    Мышь (кот)
-                    ${data[i]['fds']}
+                    ${applications[i].entity.name}
                 </p>
 
                 <p class="recent-actions__cell recent-actions__cell_font" data-status>
-                    Выполнен
-                    ${data[i]['fds']}
+                    ${applications[i].status.name}
                 </p>
             </div>
         `;
 
         document.querySelector('.recent-actions').innerHTML += blockRecord;
     }
-});
+
+    updateColorStatus();
+}

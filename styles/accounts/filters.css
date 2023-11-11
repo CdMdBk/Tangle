@@ -122,7 +122,8 @@ input[type="range"]::-webkit-slider-thumb{
     margin: 20px 0 40px 0;
 }
 
-.admin-buttons_appearance:first-child {
+.admin-buttons_appearance:first-child,
+.admin-buttons_appearance[data-status-save] {
     margin-right: 40px;
 }
 

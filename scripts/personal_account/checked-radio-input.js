@@ -4,8 +4,6 @@ setColorLabel('.donation__radio', '.donation__radio_appearance', 'donation__radi
 
 setColorLabel('.donation__purpose-radio', '.donation__purpose-radio_appearance', 'donation__purpose-radio_appearance_checked');
 
-setColorLabel('.donation__purpose-some', '.donation__purpose-some_appearance', 'donation__purpose-some_appearance_checked');
-
 $('.donation').submit(event => {
     event.preventDefault();
 });
