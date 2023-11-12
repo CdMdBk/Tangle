@@ -18,7 +18,6 @@ function userAuthorization(event) {
     }).then(response => {
         return response.json();
     }).then(data => {
-        console.log(data);
         if (data.message_error) {
             alert(data.message_error);
         } else {

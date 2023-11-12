@@ -1,24 +1,23 @@
-let changedStatuses = [];
-let arrayIndexes = new Set();
+let arrayChangedStatuses = [];
 
-function getChangeStatus() {
+buttonSave[0].addEventListener('click', changeStatusRequest);
+
+function getChangeStatuses() {
     document.querySelectorAll('select.recent-actions__cell').forEach((select, index) => {
         select.addEventListener('change', () => {
-            changedStatuses.push({
-                status_id: select.value,
-                id: select.previousElementSibling.getAttribute('id'),
-                index: index
+            arrayChangedStatuses.push({
+                status_id: +select.value.slice(select.value.indexOf('_') + 1, select.value.length),
+                record_id: +select.previousElementSibling.getAttribute('id').slice(select.previousElementSibling.getAttribute('id').indexOf('_') + 1, select.previousElementSibling.getAttribute('id').length)
             });
-            arrayIndexes.add(index);
         });
     });
 }
 
-buttonSave[0].addEventListener('click', changeStatusRequest);
-
 function changeStatusRequest() {
-    for (let i = 0; i < changedStatuses.length; i++) {
-        fetch(`https://tangle.cargotrace.ru/api/applications/${changedStatuses[i].id}`, {
+    let arrayFilterApplications = [];
+
+    for (let i = 0; i < arrayChangedStatuses.length; i++) {
+        fetch(`https://tangle.cargotrace.ru/api/applications/${arrayChangedStatuses[i].record_id}`, {
             method: 'PATCH',
             headers: {
                 'Accept': 'application/json',
@@ -26,13 +25,15 @@ function changeStatusRequest() {
                 'Authorization': `bearer ${getCookie('token')}`
             },
             body: JSON.stringify({
-                status_id: changedStatuses[i].status_id
+                status_id: arrayChangedStatuses[i].status_id
             })
         }).then(response => {
-            addListRecords();
+            return response.json();
+        }).then(data => {
+            changeStatusAfterQuery(data.data);
+            updateColorStatus();
 
-            changedStatuses = [];
-            arrayIndexes = new Set();
+            arrayChangedStatuses = [];
         });
     }
 }

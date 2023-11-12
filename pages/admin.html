@@ -144,25 +144,25 @@
                             </div>
                         </fieldset>
 
-                        <fieldset class="filter__input-box">
-                            <label class="filter__text" for="direction">
-                                Цель пожертвования
-                            </label>
+<!--                        <fieldset class="filter__input-box">-->
+<!--                            <label class="filter__text" for="direction">-->
+<!--                                Цель пожертвования-->
+<!--                            </label>-->
 
-                            <select class="filter__select" name="direction" id="direction">
-                                <option value="pet">
-                                    Питомец
-                                </option>
+<!--                            <select class="filter__select" name="direction" id="direction">-->
+<!--                                <option value="pet">-->
+<!--                                    Питомец-->
+<!--                                </option>-->
 
-                                <option value="food">
-                                    Корм
-                                </option>
+<!--                                <option value="food">-->
+<!--                                    Корм-->
+<!--                                </option>-->
 
-                                <option value="medicines">
-                                    Лекарства
-                                </option>
-                            </select>
-                        </fieldset>
+<!--                                <option value="medicines">-->
+<!--                                    Лекарства-->
+<!--                                </option>-->
+<!--                            </select>-->
+<!--                        </fieldset>-->
 
                         <fieldset class="filter__input-box">
                             <label class="filter__text" for="status">
@@ -170,19 +170,23 @@
                             </label>
 
                             <select class="filter__select" name="status" id="status">
-                                <option value="waiting-filter">
-                                    Ожидает
+                                <option value="" selected disabled>
+                                    Статус
                                 </option>
 
-                                <option value="received-filter">
-                                    Получен
-                                </option>
-
-                                <option value="completed-filter">
+                                <option value="1">
                                     Выполнен
                                 </option>
 
-                                <option value="rejected-filter">
+                                <option value="2">
+                                    Ожидает
+                                </option>
+
+                                <option value="3">
+                                    Получен
+                                </option>
+
+                                <option value="4">
                                     Отклонён
                                 </option>
                             </select>
@@ -568,7 +572,6 @@
     <script src="../scripts/preloader.js"></script>
     <script src="../scripts/landing_page/burger.js"></script>
     <script src="../scripts/admin/change-status.js"></script>
-    <script src="../scripts/admin/show-filters.js"></script>
     <script src="../scripts/personal_account/color-status.js"></script>
     <script src="../scripts/admin/toggle-show.js"></script>
     <script src="../scripts/admin/range-input.js"></script>
